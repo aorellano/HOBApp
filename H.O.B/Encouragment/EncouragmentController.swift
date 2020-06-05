@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  EncouragmentController.swift
 //  H.O.B
 //
 //  Created by Alexis Orellano on 6/3/20.
@@ -8,13 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class EncouragmentController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        view.backgroundColor = .green
     }
-
-
 }
-
