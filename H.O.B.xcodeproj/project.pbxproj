@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5A5A7248A191500C87F2E /* HeaderView.swift */; };
 		D0D079722488C2CA00CF9F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D079712488C2CA00CF9F8B /* AppDelegate.swift */; };
 		D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D079732488C2CA00CF9F8B /* SceneDelegate.swift */; };
 		D0D079762488C2CA00CF9F8B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D079752488C2CA00CF9F8B /* HomeController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D0B5A5A7248A191500C87F2E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D0D0796E2488C2CA00CF9F8B /* H.O.B.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = H.O.B.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D079712488C2CA00CF9F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D079732488C2CA00CF9F8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			children = (
 				D0D079752488C2CA00CF9F8B /* HomeController.swift */,
 				D0D0798F2488CA4500CF9F8B /* HomeView.swift */,
+				D0B5A5A7248A191500C87F2E /* HeaderView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D079762488C2CA00CF9F8B /* HomeController.swift in Sources */,
+				D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */,
 				D0D079902488CA4500CF9F8B /* HomeView.swift in Sources */,
 				D0D0798E2488C46500CF9F8B /* TabController.swift in Sources */,
 				D0D079892488C41200CF9F8B /* AccountController.swift in Sources */,

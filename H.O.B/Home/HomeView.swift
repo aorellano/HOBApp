@@ -9,41 +9,7 @@
 import UIKit
 
 class HomeView: UIView {
-    
-    var header: UILabel = {
-        let label = UILabel()
-        label.text = "H A U S   O F   B A R Z"
-        label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.primaryFont
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    var line1: UILabel = {
-        let label = UILabel()
-        label.text = "U N L E A S H"
-        label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.secondaryFont
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    var line2: UILabel = {
-        let label = UILabel()
-        label.text = "F R O M"
-        label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.secondaryFont
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    var line3: UILabel = {
-        let label = UILabel()
-        label.text = "B E N E A T H"
-        label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.secondaryFont
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
+    var headerSection = HeaderView()
     
     var scrollView: UIScrollView = {
         let view = UIScrollView()
@@ -58,29 +24,21 @@ class HomeView: UIView {
         return view
     }()
     
-    var backgroundImage: UIImageView = {
-        let imageView = UIImageView()
-        let image = UIImage(named: "small")
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    var container: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.25)
+    var stackView: UIStackView = {
+        let view = UIStackView()
+        view.axis = .vertical
+        view.backgroundColor = .blue
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         backgroundColor = .blue
         setupScrollView()
-        setupBackgroundImage()
-        setupHeading()
+        setupHeaderView()
+        setupStackView()
     }
     
     func setupScrollView() {
@@ -92,41 +50,25 @@ class HomeView: UIView {
         scrollView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
-    func setupBackgroundImage() {
-        scrollView.addSubview(backgroundImage)
-        scrollView.addSubview(container)
+    func setupHeaderView() {
+        scrollView.addSubview(headerSection)
         
-        backgroundImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
-        container.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        container.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        container.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        container.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
-        
+        headerSection.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: -50).isActive = true
+        headerSection.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        headerSection.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        headerSection.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height+50).isActive = true
     }
     
-    func setupHeading() {
-        scrollView.addSubview(header)
-        scrollView.addSubview(line1)
-        scrollView.addSubview(line2)
-        scrollView.addSubview(line3)
-
-        header.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 225).isActive = true
-        header.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-
-        line1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -60).isActive = true
-        line1.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
-        line2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
-        line2.topAnchor.constraint(equalTo: line1.bottomAnchor).isActive = true
-        line3.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 70).isActive = true
-        line3.topAnchor.constraint(equalTo: line2.bottomAnchor).isActive = true
+    func setupStackView(){
+        scrollView.addSubview(stackView)
         
-        
+        stackView.topAnchor.constraint(equalTo: headerSection.bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
     }
+    
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
