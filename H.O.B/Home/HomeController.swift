@@ -8,13 +8,14 @@
 
 import UIKit
 
-class HomeController: UIViewController {
+class HomeController: StackController {
     let homeView = HomeView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        add(HeaderController())
+        add(FeaturedItemsController())
     }
     override func loadView() {
         view = homeView
@@ -26,4 +27,5 @@ class HomeController: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
 }
+
 

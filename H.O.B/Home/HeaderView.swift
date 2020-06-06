@@ -11,9 +11,17 @@ import UIKit
 class HeaderView: UIView {
     var header: UILabel = {
         let label = UILabel()
-        label.text = "H A U S   O F   B A R Z"
+        label.text = """
+        H  A  U  S
+        O  F
+        B  A  R  Z
+        """
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor.primaryFontColor
         label.font = UIFont.primaryFont
+        label.font = UIFont.systemFont(ofSize: 60, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -22,7 +30,8 @@ class HeaderView: UIView {
         let label = UILabel()
         label.text = "U N L E A S H"
         label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.secondaryFont
+        label.font = UIFont.descriptionFont
+        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -31,7 +40,8 @@ class HeaderView: UIView {
         let label = UILabel()
         label.text = "F R O M"
         label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.secondaryFont
+        label.font = UIFont.descriptionFont
+        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -39,7 +49,8 @@ class HeaderView: UIView {
         let label = UILabel()
         label.text = "B E N E A T H"
         label.textColor = UIColor.primaryFontColor
-        label.font = UIFont.secondaryFont
+        label.font = UIFont.descriptionFont
+        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -51,6 +62,13 @@ class HeaderView: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    var darkContainer: UIView = {
+        let container = UIView()
+        container.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
     }()
     
     var container: UIView = {
@@ -66,15 +84,23 @@ class HeaderView: UIView {
         translatesAutoresizingMaskIntoConstraints = false
         setupBackground()
         setupHeader()
+        
+        self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
     }
     
     func setupBackground() {
         addSubview(backgroundImage)
+        addSubview(darkContainer)
         
         backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         backgroundImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
         backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        
+        darkContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        darkContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        darkContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        darkContainer.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 
     func setupHeader() {

@@ -9,9 +9,12 @@
 import UIKit
 
 extension UIColor {
+    static let backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1.0)
     static let primaryFontColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
 }
 extension UIFont {
-    static let primaryFont = UIFont(name: "Apple SD Gothic Neo", size: 35)
-    static let secondaryFont = UIFont(name: "Apple SD Gothic Neo", size: 20)
+    static let primaryFont = UIFont(name: "Apple SD Gothic Neo", size: 60)
+    static let secondaryFont = UIFont(name: "Apple SD Gothic Neo", size: 30)
+    static let descriptionFont = UIFont(name: "Apple SD Gothic Neo", size: 20)
 }
+
