@@ -16,5 +16,7 @@ extension UIFont {
     static let primaryFont = UIFont(name: "Apple SD Gothic Neo", size: 60)
     static let secondaryFont = UIFont(name: "Apple SD Gothic Neo", size: 30)
     static let descriptionFont = UIFont(name: "Apple SD Gothic Neo", size: 20)
+    static let productTitleFont = UIFont(name: "Apple SD Gothic Neo", size: 30)
+    static let productDescriptionFont = UIFont(name: "Apple SD Gothic Neo", size: 16)
 }
 

@@ -20,11 +20,11 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         super.viewWillAppear(animated)
         
         let tabOne = HomeController()
-        let tabOneItem = UITabBarItem(title: "Home", image: nil, tag: 0)
+        let tabOneItem = UITabBarItem(title: "Home", image: UIImage(named: "house"), tag: 0)
         let tabTwo = EncouragmentController()
-        let tabTwoItem = UITabBarItem(title: "Encouragment", image: nil, tag: 1)
+        let tabTwoItem = UITabBarItem(title: "Encouragment", image: UIImage(named: "heart"), tag: 1)
         let tabThree = AccountController()
-        let tabThreeItem = UITabBarItem(title: "Account", image: nil, tag: 2)
+        let tabThreeItem = UITabBarItem(title: "Account", image: UIImage(named: "account"), tag: 2)
         tabOne.tabBarItem = tabOneItem
         tabTwo.tabBarItem = tabTwoItem
         tabThree.tabBarItem = tabThreeItem

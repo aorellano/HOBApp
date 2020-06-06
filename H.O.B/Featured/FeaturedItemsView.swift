@@ -45,12 +45,12 @@ class FeaturedItemsView: UIView {
     func setupHeader() {
         addSubview(header)
         header.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30).isActive = true
-        header.topAnchor.constraint(equalTo: topAnchor, constant: 80).isActive = true
+        header.topAnchor.constraint(equalTo: topAnchor, constant: 85).isActive = true
     }
     
     func setupCollectionView(){
         addSubview(collectionView)
-        collectionView.topAnchor.constraint(equalTo: header.bottomAnchor).isActive = true
+        collectionView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 15).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.35).isActive = true
