@@ -11,7 +11,7 @@ import UIKit
 class FeaturedItemCell: UICollectionViewCell {
     let productTitle: UILabel = {
         let label = UILabel()
-        label.text = "Product"
+        label.text = "Mask"
         label.font = UIFont.productTitleFont
         label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false

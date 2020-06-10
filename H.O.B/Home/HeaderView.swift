@@ -109,7 +109,7 @@ class HeaderView: UIView {
         addSubview(line2)
         addSubview(line3)
 
-        header.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -150).isActive = true
+        header.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -100).isActive = true
         header.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
         line1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -60).isActive = true

@@ -9,18 +9,6 @@
 import UIKit
 
 class StackController: UIViewController {
-//    var scrollView: UIScrollView = {
-//        let view = UIScrollView()
-//        view.backgroundColor = UIColor.backgroundColor
-//        view.isScrollEnabled = true
-//        view.indicatorStyle = .black
-//        view.showsVerticalScrollIndicator = true
-//        view.isUserInteractionEnabled = true
-//
-//        view.contentSize = CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height + 1000)
-//        view.translatesAutoresizingMaskIntoConstraints = false
-//        return view
-//    }()
     private let scrollView = UIScrollView()
     private let stackView = UIStackView()
 
