@@ -15,6 +15,9 @@ class MotivationView: UIView {
         label.textColor = UIColor.primaryFontColor
         label.font = UIFont.secondaryFont
         label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -30,6 +33,23 @@ class MotivationView: UIView {
         let label = UILabel()
         label.text = "TURNING MY ANXIETY INTO MY POWERHOUSE"
         label.textColor = UIColor.primaryFontColor
+        label.font = UIFont.collectionTitleFont
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let descriptionParagraph: UILabel = {
+        let label = UILabel()
+        label.text = """
+        Never did I think I would be living with anxiety. It is something that affects your every day lifestyle. In the past, I did not understand why people made it such a big deal. felt as if it something that could easily be pushed aside and brushed off, but it was me actually sulking in my own ignorance. Unfortunately, as humans, we don’t begin to understand things until we actually experience them Through devastating life experiences...
+        """
+        label.font = UIFont.productDescriptionFont
+        label.textColor = UIColor.primaryFontColor
+        label.font = UIFont.systemFont(ofSize: 14, weight: .medium)
+        label.lineBreakMode = .byWordWrapping
+        label.numberOfLines = 0
+        label.textAlignment = .center
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -40,20 +60,6 @@ class MotivationView: UIView {
         button.backgroundColor = .blue
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
-    }()
-    
-    let descriptionParagraph: UILabel = {
-        let label = UILabel()
-        label.text = """
-        Never did I think I would be living with anxiety. It is something that affects your every day lifestyle. In the past, I did not understand why people made it such a big deal. felt as if it something that could easily be pushed aside and brushed off, but it was me actually sulking in my own ignorance. Unfortunately, as humans, we don’t begin to understand things until we actually experience them Through devastating life experiences...
-        """
-        label.font = UIFont.productDescriptionFont
-        label.textColor = UIColor.primaryFontColor
-        label.lineBreakMode = .byWordWrapping
-        label.numberOfLines = 0
-        label.textAlignment = .center
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
     }()
     
 
@@ -73,7 +79,7 @@ class MotivationView: UIView {
         addSubview(headerTitle)
         
         headerTitle.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        headerTitle.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        headerTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
     }
     
     func setupMotivationImage() {
@@ -89,7 +95,8 @@ class MotivationView: UIView {
         addSubview(descriptionTitle)
         
         descriptionTitle.topAnchor.constraint(equalTo: motivationImage.bottomAnchor, constant: 40).isActive = true
-        descriptionTitle.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        descriptionTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+        descriptionTitle.trailingAnchor.constraint(equalTo: trailingAnchor, constant:  -20).isActive = true
     }
     
     func setupDescriptionParagraph() {
