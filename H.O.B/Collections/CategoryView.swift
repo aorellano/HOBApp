@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionsView: UIView {
+class CategoryView: UIView {
     let header: UILabel = {
         let header = UILabel()
         header.text = "Shop by Collection"
@@ -22,7 +22,7 @@ class CollectionsView: UIView {
     let productsCollectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
         collectionView.backgroundColor = .backgroundColor
-        collectionView.register(CollectionsCell.self, forCellWithReuseIdentifier: "cell2")
+        collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: "cell2")
         collectionView.isScrollEnabled = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         return collectionView
@@ -31,7 +31,7 @@ class CollectionsView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.heightAnchor.constraint(equalToConstant: 2*UIScreen.main.bounds.height).isActive = true
+        self.heightAnchor.constraint(equalToConstant: 1.65*UIScreen.main.bounds.height).isActive = true
         
         backgroundColor = .backgroundColor
         setupHeader()
@@ -52,7 +52,7 @@ class CollectionsView: UIView {
         productsCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         productsCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
        // productsCollectionView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        productsCollectionView.heightAnchor.constraint(equalToConstant: (1.85*UIScreen.main.bounds.height)).isActive = true
+        productsCollectionView.heightAnchor.constraint(equalToConstant: (1.55*UIScreen.main.bounds.height)).isActive = true
     }
     
     required init?(coder: NSCoder) {

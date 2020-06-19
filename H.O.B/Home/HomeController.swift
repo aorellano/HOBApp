@@ -16,7 +16,7 @@ class HomeController: StackController {
         
         add(HeaderController())
         add(FeaturedItemsController())
-        add(CollectionsController())
+        add(CategoryController())
         add(WorkoutsController())
         add(MotivationController())
     }

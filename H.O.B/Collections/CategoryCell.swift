@@ -8,12 +8,12 @@
 
 import UIKit
 
-class CollectionsCell: UICollectionViewCell {
+class CategoryCell: UICollectionViewCell {
     let productTitle: UILabel = {
         let label = UILabel()
         label.text = "Mens"
-        label.font = UIFont.productTitleFont
-        label.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        label.font = UIFont.collectionTitleFont
+        label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -33,6 +33,10 @@ class CollectionsCell: UICollectionViewCell {
         backgroundColor = .backgroundColor
         setupProductTitle()
         setupProductImage()
+    }
+    
+    func setup(_ category: Category) {
+        productTitle.text = category.name
     }
     
     override func layoutSubviews() {
