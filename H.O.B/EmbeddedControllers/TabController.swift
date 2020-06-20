@@ -24,7 +24,7 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         let tabTwo = EncouragmentController()
         let tabTwoItem = UITabBarItem(title: "Encouragment", image: UIImage(named: "heart"), tag: 1)
         let tabThree = AccountController()
-        let tabThreeItem = UITabBarItem(title: "Account", image: UIImage(named: "account"), tag: 2)
+        let tabThreeItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings"), tag: 2)
         tabOne.tabBarItem = tabOneItem
         tabTwo.tabBarItem = tabTwoItem
         tabThree.tabBarItem = tabThreeItem

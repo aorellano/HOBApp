@@ -18,27 +18,57 @@ class AccountController: UITableViewController {
         
         tableView.register(AccountCell.self, forCellReuseIdentifier: "accountCell")
         tableView.backgroundColor = UIColor.backgroundColor
-        tableView.separatorColor = .lightGray
+        tableView.separatorColor = .darkGray
         tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
         }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 4
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
             return 1
         } else if section == 1 {
+            return 2
+        } else if section == 2 {
             return 3
         } else {
-            return 2
+            return 1
         }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "accountCell", for: indexPath) as! AccountCell
+        
+        cell.textLabel?.textColor = .white
+        
+        if indexPath.section == 0 && indexPath.row == 0 {
+            cell.textLabel?.text = "Account"
+        } else if indexPath.section == 1 && indexPath.row == 0 {
+            cell.textLabel?.text = "About Us"
+        } else if indexPath.section == 1 && indexPath.row == 1 {
+            cell.textLabel?.text = "Contact Us"
+        } else if indexPath.section == 2 && indexPath.row == 0 {
+            cell.textLabel?.text = "Shipping & Returns"
+        } else if indexPath.section == 2 && indexPath.row == 1 {
+            cell.textLabel?.text = "Privacy Policy"
+        } else if indexPath.section == 2 && indexPath.row == 2 {
+            cell.textLabel?.text = "Terms & Conditions"
+        } else {
+            cell.textLabel?.text = "Login"
+            cell.textLabel?.textAlignment = .center
+        }
+
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.section == 3 {
+            let loginController = LoginController()
+            loginController.modalPresentationStyle = .formSheet
+            self.present(loginController, animated: true)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

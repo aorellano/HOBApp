@@ -11,6 +11,11 @@
 		D06EDF9F249862FA00566AE2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDF9E249862FA00566AE2 /* Category.swift */; };
 		D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA0249D7B5B00566AE2 /* AccountView.swift */; };
 		D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA2249D7C9300566AE2 /* AccountCell.swift */; };
+		D06EDFA6249D9F9800566AE2 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA5249D9F9800566AE2 /* LoginController.swift */; };
+		D06EDFA8249D9FC300566AE2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA7249D9FC300566AE2 /* LoginView.swift */; };
+		D06EDFAA249DA12500566AE2 /* LoginInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA9249DA12500566AE2 /* LoginInputContainer.swift */; };
+		D06EDFAC249DAC0600566AE2 /* TestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFAB249DAC0600566AE2 /* TestDataSource.swift */; };
+		D06EDFAE249DAD5600566AE2 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFAD249DAD5600566AE2 /* TestCell.swift */; };
 		D07161022490A60200C26A8C /* MotivationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161012490A60200C26A8C /* MotivationController.swift */; };
 		D07161042490A60B00C26A8C /* MotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161032490A60B00C26A8C /* MotivationView.swift */; };
 		D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161062490A63100C26A8C /* WorkoutsController.swift */; };
@@ -44,6 +49,11 @@
 		D06EDF9E249862FA00566AE2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D06EDFA0249D7B5B00566AE2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D06EDFA2249D7C9300566AE2 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
+		D06EDFA5249D9F9800566AE2 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		D06EDFA7249D9FC300566AE2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D06EDFA9249DA12500566AE2 /* LoginInputContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputContainer.swift; sourceTree = "<group>"; };
+		D06EDFAB249DAC0600566AE2 /* TestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataSource.swift; sourceTree = "<group>"; };
+		D06EDFAD249DAD5600566AE2 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		D07161012490A60200C26A8C /* MotivationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationController.swift; sourceTree = "<group>"; };
 		D07161032490A60B00C26A8C /* MotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationView.swift; sourceTree = "<group>"; };
 		D07161062490A63100C26A8C /* WorkoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsController.swift; sourceTree = "<group>"; };
@@ -103,13 +113,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D07161002490A5EE00C26A8C /* Motivation */ = {
+		D06EDFA4249D9F7C00566AE2 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				D06EDFA5249D9F9800566AE2 /* LoginController.swift */,
+				D06EDFA7249D9FC300566AE2 /* LoginView.swift */,
+				D06EDFA9249DA12500566AE2 /* LoginInputContainer.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		D07161002490A5EE00C26A8C /* Testimonials */ = {
 			isa = PBXGroup;
 			children = (
 				D07161012490A60200C26A8C /* MotivationController.swift */,
 				D07161032490A60B00C26A8C /* MotivationView.swift */,
+				D06EDFAB249DAC0600566AE2 /* TestDataSource.swift */,
+				D06EDFAD249DAD5600566AE2 /* TestCell.swift */,
 			);
-			path = Motivation;
+			path = Testimonials;
 			sourceTree = "<group>";
 		};
 		D07161052490A61000C26A8C /* Workouts */ = {
@@ -174,13 +196,14 @@
 		D0D079702488C2CA00CF9F8B /* H.O.B */ = {
 			isa = PBXGroup;
 			children = (
+				D06EDFA4249D9F7C00566AE2 /* Authentication */,
 				D07161052490A61000C26A8C /* Workouts */,
-				D07161002490A5EE00C26A8C /* Motivation */,
+				D07161002490A5EE00C26A8C /* Testimonials */,
 				D0B5A5B9248C41A300C87F2E /* Collections */,
 				D0B5A5B8248C3EE600C87F2E /* EmbeddedControllers */,
 				D0B5A5A9248ACA5300C87F2E /* Featured */,
 				D0D079932489B26100CF9F8B /* Extensions */,
-				D0D0798C2488C42D00CF9F8B /* Account */,
+				D0D0798C2488C42D00CF9F8B /* Settings */,
 				D0D0798B2488C41D00CF9F8B /* Encouragment */,
 				D0D0798A2488C41700CF9F8B /* Home */,
 				D0D079712488C2CA00CF9F8B /* AppDelegate.swift */,
@@ -211,14 +234,14 @@
 			path = Encouragment;
 			sourceTree = "<group>";
 		};
-		D0D0798C2488C42D00CF9F8B /* Account */ = {
+		D0D0798C2488C42D00CF9F8B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				D0D079882488C41200CF9F8B /* AccountController.swift */,
 				D06EDFA0249D7B5B00566AE2 /* AccountView.swift */,
 				D06EDFA2249D7C9300566AE2 /* AccountCell.swift */,
 			);
-			path = Account;
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		D0D079932489B26100CF9F8B /* Extensions */ = {
@@ -343,12 +366,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D06EDFAE249DAD5600566AE2 /* TestCell.swift in Sources */,
 				D0B5A5C1248C747B00C87F2E /* CategoryDataSource.swift in Sources */,
 				D0D079762488C2CA00CF9F8B /* HomeController.swift in Sources */,
 				D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */,
 				D07161022490A60200C26A8C /* MotivationController.swift in Sources */,
+				D06EDFA6249D9F9800566AE2 /* LoginController.swift in Sources */,
 				D0B5A5AD248ACACA00C87F2E /* FeaturedItemsView.swift in Sources */,
 				D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */,
+				D06EDFAA249DA12500566AE2 /* LoginInputContainer.swift in Sources */,
 				D0B5A5B3248B299800C87F2E /* FeaturedItemsDataSource.swift in Sources */,
 				D07161042490A60B00C26A8C /* MotivationView.swift in Sources */,
 				D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */,
@@ -364,8 +390,10 @@
 				D0B5A5BD248C42F400C87F2E /* CategoryView.swift in Sources */,
 				D0B5A5AB248ACA9600C87F2E /* FeaturedItemsController.swift in Sources */,
 				D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */,
+				D06EDFA8249D9FC300566AE2 /* LoginView.swift in Sources */,
 				D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */,
 				D0D079872488C40700CF9F8B /* EncouragmentController.swift in Sources */,
+				D06EDFAC249DAC0600566AE2 /* TestDataSource.swift in Sources */,
 				D0D079952489B27C00CF9F8B /* UIColor+Extension.swift in Sources */,
 				D0B5A5BF248C73C200C87F2E /* CategoryCell.swift in Sources */,
 				D06EDF9F249862FA00566AE2 /* Category.swift in Sources */,

@@ -23,8 +23,8 @@ class WorkoutsView: UIView {
     var playerView1: YTPlayerView = {
         let player = YTPlayerView()
         player.load(withVideoId: "EYLUZUyfios", playerVars: ["playsinline": 1, "origin": "https://www.youtube.com"])
-        player.layer.cornerRadius = 20
-        player.layer.masksToBounds = true
+        //player.layer.cornerRadius = 20
+        //player.layer.masksToBounds = true
         player.translatesAutoresizingMaskIntoConstraints = false
         return player
     }()
@@ -47,7 +47,7 @@ class WorkoutsView: UIView {
         """
         label.font = UIFont.productDescriptionFont
         label.textColor = UIColor.primaryFontColor
-            label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+            label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -57,8 +57,15 @@ class WorkoutsView: UIView {
     
     let watchMoreButton: UIButton = {
         let button = UIButton()
-        button.setTitle("Read More", for: .normal)
-        button.backgroundColor = .blue
+        let attributes : [NSAttributedString.Key : Any] = [
+            NSAttributedString.Key.font : UIFont.systemFont(ofSize: 14.0),
+            NSAttributedString.Key.foregroundColor : UIColor(red: 30/255,green: 144/255, blue: 255/255, alpha: 1.0),
+            NSAttributedString.Key.underlineStyle : NSUnderlineStyle.single.rawValue
+        ]
+        let attributeString = NSMutableAttributedString(string: "Watch More",
+                                                              attributes: attributes)
+        button.setAttributedTitle(attributeString, for: .normal)
+        
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -66,7 +73,6 @@ class WorkoutsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
         
         setupTitleHeader()
@@ -78,27 +84,27 @@ class WorkoutsView: UIView {
     func setupTitleHeader() {
         addSubview(titleHeader)
         
-        titleHeader.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        titleHeader.topAnchor.constraint(equalTo: topAnchor, constant: 40).isActive = true
         titleHeader.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
     }
     func setupPlayerVideos() {
         addSubview(playerView1)
-        addSubview(playerView2)
+        //addSubview(playerView2)
         
-        playerView1.topAnchor.constraint(equalTo: titleHeader.bottomAnchor, constant: 40).isActive = true
-        playerView1.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        playerView1.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        playerView1.heightAnchor.constraint(equalToConstant: 200).isActive = true
-        playerView2.topAnchor.constraint(equalTo: playerView1.bottomAnchor, constant: 20).isActive = true
-        playerView2.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        playerView2.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        playerView2.heightAnchor.constraint(equalToConstant: 200).isActive = true
+        playerView1.topAnchor.constraint(equalTo: titleHeader.bottomAnchor, constant: 80).isActive = true
+        playerView1.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        playerView1.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        playerView1.heightAnchor.constraint(equalToConstant: 250).isActive = true
+//        playerView2.topAnchor.constraint(equalTo: playerView1.bottomAnchor, constant: 20).isActive = true
+//        playerView2.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
+//        playerView2.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+//        playerView2.heightAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
     func setupDescriptionParagraph() {
         addSubview(descriptionParagraph)
         
-        descriptionParagraph.topAnchor.constraint(equalTo: playerView2.bottomAnchor, constant: 40).isActive = true
+        descriptionParagraph.topAnchor.constraint(equalTo: playerView1.bottomAnchor, constant: 80).isActive = true
         descriptionParagraph.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40).isActive = true
         descriptionParagraph.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -40).isActive = true
     }
