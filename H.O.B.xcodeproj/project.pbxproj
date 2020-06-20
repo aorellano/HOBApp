@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		5A104284DF9455989C49544B /* Pods_H_O_B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92B0562109B73F279721F83 /* Pods_H_O_B.framework */; };
 		D06EDF9F249862FA00566AE2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDF9E249862FA00566AE2 /* Category.swift */; };
+		D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA0249D7B5B00566AE2 /* AccountView.swift */; };
+		D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA2249D7C9300566AE2 /* AccountCell.swift */; };
 		D07161022490A60200C26A8C /* MotivationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161012490A60200C26A8C /* MotivationController.swift */; };
 		D07161042490A60B00C26A8C /* MotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161032490A60B00C26A8C /* MotivationView.swift */; };
 		D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161062490A63100C26A8C /* WorkoutsController.swift */; };
@@ -40,6 +42,8 @@
 		2307F4D1C5DC85A615B5AF67 /* Pods-H.O.B.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.O.B.debug.xcconfig"; path = "Target Support Files/Pods-H.O.B/Pods-H.O.B.debug.xcconfig"; sourceTree = "<group>"; };
 		AB46CFD14683E4CF7C6F856C /* Pods-H.O.B.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.O.B.release.xcconfig"; path = "Target Support Files/Pods-H.O.B/Pods-H.O.B.release.xcconfig"; sourceTree = "<group>"; };
 		D06EDF9E249862FA00566AE2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		D06EDFA0249D7B5B00566AE2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		D06EDFA2249D7C9300566AE2 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
 		D07161012490A60200C26A8C /* MotivationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationController.swift; sourceTree = "<group>"; };
 		D07161032490A60B00C26A8C /* MotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationView.swift; sourceTree = "<group>"; };
 		D07161062490A63100C26A8C /* WorkoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsController.swift; sourceTree = "<group>"; };
@@ -211,6 +215,8 @@
 			isa = PBXGroup;
 			children = (
 				D0D079882488C41200CF9F8B /* AccountController.swift */,
+				D06EDFA0249D7B5B00566AE2 /* AccountView.swift */,
+				D06EDFA2249D7C9300566AE2 /* AccountCell.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -345,6 +351,7 @@
 				D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */,
 				D0B5A5B3248B299800C87F2E /* FeaturedItemsDataSource.swift in Sources */,
 				D07161042490A60B00C26A8C /* MotivationView.swift in Sources */,
+				D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */,
 				D0D079902488CA4500CF9F8B /* HomeView.swift in Sources */,
 				D0B5A5B1248AD08C00C87F2E /* HeaderController.swift in Sources */,
 				D0D0798E2488C46500CF9F8B /* TabController.swift in Sources */,
@@ -356,6 +363,7 @@
 				D0D079722488C2CA00CF9F8B /* AppDelegate.swift in Sources */,
 				D0B5A5BD248C42F400C87F2E /* CategoryView.swift in Sources */,
 				D0B5A5AB248ACA9600C87F2E /* FeaturedItemsController.swift in Sources */,
+				D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */,
 				D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */,
 				D0D079872488C40700CF9F8B /* EncouragmentController.swift in Sources */,
 				D0D079952489B27C00CF9F8B /* UIColor+Extension.swift in Sources */,
