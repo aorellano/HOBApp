@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5A104284DF9455989C49544B /* Pods_H_O_B.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E92B0562109B73F279721F83 /* Pods_H_O_B.framework */; };
+		D056B2B1249EA27200195EA9 /* ConditionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B0249EA27200195EA9 /* ConditionsController.swift */; };
+		D056B2B3249EA28800195EA9 /* PrivacyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B2249EA28800195EA9 /* PrivacyController.swift */; };
+		D056B2B6249EA2A300195EA9 /* ShippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B5249EA2A300195EA9 /* ShippingController.swift */; };
 		D06EDF9F249862FA00566AE2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDF9E249862FA00566AE2 /* Category.swift */; };
 		D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA0249D7B5B00566AE2 /* AccountView.swift */; };
 		D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA2249D7C9300566AE2 /* AccountCell.swift */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		2307F4D1C5DC85A615B5AF67 /* Pods-H.O.B.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.O.B.debug.xcconfig"; path = "Target Support Files/Pods-H.O.B/Pods-H.O.B.debug.xcconfig"; sourceTree = "<group>"; };
 		AB46CFD14683E4CF7C6F856C /* Pods-H.O.B.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-H.O.B.release.xcconfig"; path = "Target Support Files/Pods-H.O.B/Pods-H.O.B.release.xcconfig"; sourceTree = "<group>"; };
+		D056B2B0249EA27200195EA9 /* ConditionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsController.swift; sourceTree = "<group>"; };
+		D056B2B2249EA28800195EA9 /* PrivacyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyController.swift; path = /Users/alexisorellano/Desktop/H.O.B/H.O.B/Settings/PrivacyController.swift; sourceTree = "<absolute>"; };
+		D056B2B5249EA2A300195EA9 /* ShippingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingController.swift; sourceTree = "<group>"; };
 		D06EDF9E249862FA00566AE2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D06EDFA0249D7B5B00566AE2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D06EDFA2249D7C9300566AE2 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -237,9 +243,12 @@
 		D0D0798C2488C42D00CF9F8B /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				D056B2B2249EA28800195EA9 /* PrivacyController.swift */,
 				D0D079882488C41200CF9F8B /* AccountController.swift */,
 				D06EDFA0249D7B5B00566AE2 /* AccountView.swift */,
 				D06EDFA2249D7C9300566AE2 /* AccountCell.swift */,
+				D056B2B0249EA27200195EA9 /* ConditionsController.swift */,
+				D056B2B5249EA2A300195EA9 /* ShippingController.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -379,15 +388,18 @@
 				D07161042490A60B00C26A8C /* MotivationView.swift in Sources */,
 				D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */,
 				D0D079902488CA4500CF9F8B /* HomeView.swift in Sources */,
+				D056B2B6249EA2A300195EA9 /* ShippingController.swift in Sources */,
 				D0B5A5B1248AD08C00C87F2E /* HeaderController.swift in Sources */,
 				D0D0798E2488C46500CF9F8B /* TabController.swift in Sources */,
 				D07161092490A63E00C26A8C /* WorkoutsView.swift in Sources */,
 				D0B5A5B5248B33CF00C87F2E /* FeaturedItemCell.swift in Sources */,
 				D0D079892488C41200CF9F8B /* AccountController.swift in Sources */,
 				D0B5A5BB248C42D600C87F2E /* CategoryController.swift in Sources */,
+				D056B2B1249EA27200195EA9 /* ConditionsController.swift in Sources */,
 				D0B5A5AF248ACC4F00C87F2E /* StackController.swift in Sources */,
 				D0D079722488C2CA00CF9F8B /* AppDelegate.swift in Sources */,
 				D0B5A5BD248C42F400C87F2E /* CategoryView.swift in Sources */,
+				D056B2B3249EA28800195EA9 /* PrivacyController.swift in Sources */,
 				D0B5A5AB248ACA9600C87F2E /* FeaturedItemsController.swift in Sources */,
 				D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */,
 				D06EDFA8249D9FC300566AE2 /* LoginView.swift in Sources */,

@@ -64,7 +64,23 @@ class AccountController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 3 {
+        if indexPath.section == 0 && indexPath.row == 0 {
+            //cell.textLabel?.text = "Account"
+        } else if indexPath.section == 1 && indexPath.row == 0 {
+            //cell.textLabel?.text = "About Us"
+        } else if indexPath.section == 1 && indexPath.row == 1 {
+            //cell.textLabel?.text = "Contact Us"
+        } else if indexPath.section == 2 && indexPath.row == 0 {
+            let shippingController = ShippingController()
+            shippingController.modalPresentationStyle = .formSheet
+            self.present(shippingController, animated: true)
+        } else if indexPath.section == 2 && indexPath.row == 1 {
+            let privacyController = PrivacyController()
+            privacyController.modalPresentationStyle = .formSheet
+            self.present(privacyController, animated: true)
+        } else if indexPath.section == 2 && indexPath.row == 2 {
+            //cell.textLabel?.text = "Terms & Conditions"
+        } else {
             let loginController = LoginController()
             loginController.modalPresentationStyle = .formSheet
             self.present(loginController, animated: true)
@@ -78,7 +94,7 @@ class AccountController: UITableViewController {
         navigationController?.navigationBar.barTintColor = UIColor.backgroundColor
        
         
-        tabBarController?.navigationItem.title = "Account"
+        tabBarController?.navigationItem.title = "Settings"
         navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
         navigationItem.largeTitleDisplayMode = .automatic
         navigationController?.navigationBar.sizeToFit()
