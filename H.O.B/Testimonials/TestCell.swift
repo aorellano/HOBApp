@@ -69,6 +69,10 @@ I have seen this company grow from a small idea to what it is now. The founder i
         setupProductDescription()
     }
     
+    func setup(_ testimonial: UIImage) {
+        productImage.image = testimonial
+    }
+    
     func setupProductTitle() {
         addSubview(productTitle)
         

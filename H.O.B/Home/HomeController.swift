@@ -18,7 +18,7 @@ class HomeController: StackController {
         add(FeaturedItemsController())
         add(CategoryController())
         add(WorkoutsController())
-        add(MotivationController())
+        add(TestimonialsController())
     }
     
     override func loadView() {

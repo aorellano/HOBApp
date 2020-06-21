@@ -11,6 +11,7 @@
 		D056B2B1249EA27200195EA9 /* ConditionsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B0249EA27200195EA9 /* ConditionsController.swift */; };
 		D056B2B3249EA28800195EA9 /* PrivacyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B2249EA28800195EA9 /* PrivacyController.swift */; };
 		D056B2B6249EA2A300195EA9 /* ShippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B5249EA2A300195EA9 /* ShippingController.swift */; };
+		D056B2B8249EE64400195EA9 /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B7249EE64400195EA9 /* Testimonial.swift */; };
 		D06EDF9F249862FA00566AE2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDF9E249862FA00566AE2 /* Category.swift */; };
 		D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA0249D7B5B00566AE2 /* AccountView.swift */; };
 		D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA2249D7C9300566AE2 /* AccountCell.swift */; };
@@ -19,8 +20,8 @@
 		D06EDFAA249DA12500566AE2 /* LoginInputContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA9249DA12500566AE2 /* LoginInputContainer.swift */; };
 		D06EDFAC249DAC0600566AE2 /* TestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFAB249DAC0600566AE2 /* TestDataSource.swift */; };
 		D06EDFAE249DAD5600566AE2 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFAD249DAD5600566AE2 /* TestCell.swift */; };
-		D07161022490A60200C26A8C /* MotivationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161012490A60200C26A8C /* MotivationController.swift */; };
-		D07161042490A60B00C26A8C /* MotivationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161032490A60B00C26A8C /* MotivationView.swift */; };
+		D07161022490A60200C26A8C /* TestimonialsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161012490A60200C26A8C /* TestimonialsController.swift */; };
+		D07161042490A60B00C26A8C /* TestimonialsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161032490A60B00C26A8C /* TestimonialsView.swift */; };
 		D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161062490A63100C26A8C /* WorkoutsController.swift */; };
 		D07161092490A63E00C26A8C /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161082490A63E00C26A8C /* WorkoutsView.swift */; };
 		D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5A5A7248A191500C87F2E /* HeaderView.swift */; };
@@ -52,6 +53,7 @@
 		D056B2B0249EA27200195EA9 /* ConditionsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConditionsController.swift; sourceTree = "<group>"; };
 		D056B2B2249EA28800195EA9 /* PrivacyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyController.swift; path = /Users/alexisorellano/Desktop/H.O.B/H.O.B/Settings/PrivacyController.swift; sourceTree = "<absolute>"; };
 		D056B2B5249EA2A300195EA9 /* ShippingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingController.swift; sourceTree = "<group>"; };
+		D056B2B7249EE64400195EA9 /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testimonial.swift; sourceTree = "<group>"; };
 		D06EDF9E249862FA00566AE2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D06EDFA0249D7B5B00566AE2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D06EDFA2249D7C9300566AE2 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		D06EDFA9249DA12500566AE2 /* LoginInputContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInputContainer.swift; sourceTree = "<group>"; };
 		D06EDFAB249DAC0600566AE2 /* TestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataSource.swift; sourceTree = "<group>"; };
 		D06EDFAD249DAD5600566AE2 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
-		D07161012490A60200C26A8C /* MotivationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationController.swift; sourceTree = "<group>"; };
-		D07161032490A60B00C26A8C /* MotivationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationView.swift; sourceTree = "<group>"; };
+		D07161012490A60200C26A8C /* TestimonialsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsController.swift; sourceTree = "<group>"; };
+		D07161032490A60B00C26A8C /* TestimonialsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestimonialsView.swift; sourceTree = "<group>"; };
 		D07161062490A63100C26A8C /* WorkoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsController.swift; sourceTree = "<group>"; };
 		D07161082490A63E00C26A8C /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		D0B5A5A7248A191500C87F2E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -132,10 +134,11 @@
 		D07161002490A5EE00C26A8C /* Testimonials */ = {
 			isa = PBXGroup;
 			children = (
-				D07161012490A60200C26A8C /* MotivationController.swift */,
-				D07161032490A60B00C26A8C /* MotivationView.swift */,
+				D07161012490A60200C26A8C /* TestimonialsController.swift */,
+				D07161032490A60B00C26A8C /* TestimonialsView.swift */,
 				D06EDFAB249DAC0600566AE2 /* TestDataSource.swift */,
 				D06EDFAD249DAD5600566AE2 /* TestCell.swift */,
+				D056B2B7249EE64400195EA9 /* Testimonial.swift */,
 			);
 			path = Testimonials;
 			sourceTree = "<group>";
@@ -379,13 +382,13 @@
 				D0B5A5C1248C747B00C87F2E /* CategoryDataSource.swift in Sources */,
 				D0D079762488C2CA00CF9F8B /* HomeController.swift in Sources */,
 				D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */,
-				D07161022490A60200C26A8C /* MotivationController.swift in Sources */,
+				D07161022490A60200C26A8C /* TestimonialsController.swift in Sources */,
 				D06EDFA6249D9F9800566AE2 /* LoginController.swift in Sources */,
 				D0B5A5AD248ACACA00C87F2E /* FeaturedItemsView.swift in Sources */,
 				D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */,
 				D06EDFAA249DA12500566AE2 /* LoginInputContainer.swift in Sources */,
 				D0B5A5B3248B299800C87F2E /* FeaturedItemsDataSource.swift in Sources */,
-				D07161042490A60B00C26A8C /* MotivationView.swift in Sources */,
+				D07161042490A60B00C26A8C /* TestimonialsView.swift in Sources */,
 				D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */,
 				D0D079902488CA4500CF9F8B /* HomeView.swift in Sources */,
 				D056B2B6249EA2A300195EA9 /* ShippingController.swift in Sources */,
@@ -403,6 +406,7 @@
 				D0B5A5AB248ACA9600C87F2E /* FeaturedItemsController.swift in Sources */,
 				D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */,
 				D06EDFA8249D9FC300566AE2 /* LoginView.swift in Sources */,
+				D056B2B8249EE64400195EA9 /* Testimonial.swift in Sources */,
 				D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */,
 				D0D079872488C40700CF9F8B /* EncouragmentController.swift in Sources */,
 				D06EDFAC249DAC0600566AE2 /* TestDataSource.swift in Sources */,

@@ -73,7 +73,7 @@ class WorkoutsView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
+        self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.05).isActive = true
         
         setupTitleHeader()
         setupPlayerVideos()

@@ -8,14 +8,14 @@
 
 import UIKit
 
-class MotivationView: UIView {
+class TestimonialsView: UIView {
     let headerTitle: UILabel = {
         let label = UILabel()
         label.text = "Testimonials"
         label.textAlignment = .center
         label.textColor = UIColor.primaryFontColor
         label.font = UIFont.secondaryFont
-        label.font = UIFont.systemFont(ofSize: 36, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -92,14 +92,14 @@ class MotivationView: UIView {
         addSubview(headerTitle)
         
         headerTitle.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        headerTitle.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        headerTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
     }
     
     func setupCollectionView(){
            addSubview(collectionView)
            collectionView.topAnchor.constraint(equalTo: headerTitle.bottomAnchor).isActive = true
            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-           collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+           collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15).isActive = true
            collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.35).isActive = true
        }
     

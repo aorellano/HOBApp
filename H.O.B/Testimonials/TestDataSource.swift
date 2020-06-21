@@ -10,12 +10,12 @@ import UIKit
 
 class TestDataSource: NSObject, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return Testimonial.images.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "testCell", for: indexPath) as! TestCell
-        //cell.backgroundColor = .white
+        cell.setup(UIImage(named: "\(Testimonial.images[indexPath.row])")!)
         return cell
     }
     

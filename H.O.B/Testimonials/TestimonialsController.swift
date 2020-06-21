@@ -7,8 +7,8 @@
 //
 import UIKit
 
-class MotivationController: UIViewController {
-    let motivationView = MotivationView()
+class TestimonialsController: UIViewController {
+    let motivationView = TestimonialsView()
     let dataSource = TestDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class MotivationController: UIViewController {
     }
 }
 
-extension MotivationController:  UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+extension TestimonialsController:  UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
    
    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        
