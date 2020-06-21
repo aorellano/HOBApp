@@ -52,7 +52,7 @@ class FeaturedItemsView: UIView {
         addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 15).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
-        collectionView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        collectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -15).isActive = true
         collectionView.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.35).isActive = true
     }
     

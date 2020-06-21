@@ -12,6 +12,8 @@
 		D056B2B3249EA28800195EA9 /* PrivacyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B2249EA28800195EA9 /* PrivacyController.swift */; };
 		D056B2B6249EA2A300195EA9 /* ShippingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B5249EA2A300195EA9 /* ShippingController.swift */; };
 		D056B2B8249EE64400195EA9 /* Testimonial.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B7249EE64400195EA9 /* Testimonial.swift */; };
+		D056B2BA249EF14A00195EA9 /* Featured.swift in Sources */ = {isa = PBXBuildFile; fileRef = D056B2B9249EF14A00195EA9 /* Featured.swift */; };
+		D056B2BC249EF47200195EA9 /* Screen Shot 2020-06-20 at 6.50.29 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = D056B2BB249EF47200195EA9 /* Screen Shot 2020-06-20 at 6.50.29 PM.png */; };
 		D06EDF9F249862FA00566AE2 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDF9E249862FA00566AE2 /* Category.swift */; };
 		D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA0249D7B5B00566AE2 /* AccountView.swift */; };
 		D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D06EDFA2249D7C9300566AE2 /* AccountCell.swift */; };
@@ -54,6 +56,8 @@
 		D056B2B2249EA28800195EA9 /* PrivacyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PrivacyController.swift; path = /Users/alexisorellano/Desktop/H.O.B/H.O.B/Settings/PrivacyController.swift; sourceTree = "<absolute>"; };
 		D056B2B5249EA2A300195EA9 /* ShippingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShippingController.swift; sourceTree = "<group>"; };
 		D056B2B7249EE64400195EA9 /* Testimonial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testimonial.swift; sourceTree = "<group>"; };
+		D056B2B9249EF14A00195EA9 /* Featured.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Featured.swift; sourceTree = "<group>"; };
+		D056B2BB249EF47200195EA9 /* Screen Shot 2020-06-20 at 6.50.29 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screen Shot 2020-06-20 at 6.50.29 PM.png"; sourceTree = "<group>"; };
 		D06EDF9E249862FA00566AE2 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D06EDFA0249D7B5B00566AE2 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		D06EDFA2249D7C9300566AE2 /* AccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountCell.swift; sourceTree = "<group>"; };
@@ -159,6 +163,7 @@
 				D0B5A5AC248ACACA00C87F2E /* FeaturedItemsView.swift */,
 				D0B5A5B2248B299800C87F2E /* FeaturedItemsDataSource.swift */,
 				D0B5A5B4248B33CF00C87F2E /* FeaturedItemCell.swift */,
+				D056B2B9249EF14A00195EA9 /* Featured.swift */,
 			);
 			path = Featured;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				D0D0798A2488C41700CF9F8B /* Home */,
 				D0D079712488C2CA00CF9F8B /* AppDelegate.swift */,
 				D0D0797A2488C2D000CF9F8B /* Assets.xcassets */,
+				D056B2BB249EF47200195EA9 /* Screen Shot 2020-06-20 at 6.50.29 PM.png */,
 				D0D0797C2488C2D000CF9F8B /* LaunchScreen.storyboard */,
 				D0D0797F2488C2D000CF9F8B /* Info.plist */,
 			);
@@ -325,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D0797E2488C2D000CF9F8B /* LaunchScreen.storyboard in Resources */,
+				D056B2BC249EF47200195EA9 /* Screen Shot 2020-06-20 at 6.50.29 PM.png in Resources */,
 				D0D0797B2488C2D000CF9F8B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -387,6 +394,7 @@
 				D0B5A5AD248ACACA00C87F2E /* FeaturedItemsView.swift in Sources */,
 				D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */,
 				D06EDFAA249DA12500566AE2 /* LoginInputContainer.swift in Sources */,
+				D056B2BA249EF14A00195EA9 /* Featured.swift in Sources */,
 				D0B5A5B3248B299800C87F2E /* FeaturedItemsDataSource.swift in Sources */,
 				D07161042490A60B00C26A8C /* TestimonialsView.swift in Sources */,
 				D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */,

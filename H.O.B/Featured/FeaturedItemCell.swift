@@ -13,7 +13,7 @@ class FeaturedItemCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Mask"
         label.font = UIFont.productTitleFont
-        label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 28, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -31,6 +31,8 @@ class FeaturedItemCell: UICollectionViewCell {
     let productImage: UIImageView = {
         let imageView = UIImageView()
         let image = UIImage(named: "mask1")
+        imageView.layer.cornerRadius = 10
+        imageView.layer.masksToBounds = true
         imageView.image = image
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -50,6 +52,11 @@ class FeaturedItemCell: UICollectionViewCell {
         setupProductTitle()
         setupProductDescription()
         setupProductImage()
+    }
+    
+    func setup(_ title: String, _ image: UIImage) {
+        self.productTitle.text = title
+        self.productImage.image = image
     }
     
     func setupProductTitle() {

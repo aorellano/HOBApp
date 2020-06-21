@@ -78,7 +78,7 @@ class TestimonialsView: UIView {
         super.init(frame: frame)
         
         backgroundColor = UIColor.backgroundColor
-        self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
+        self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/1.3).isActive = true
          collectionView.register(TestCell.self, forCellWithReuseIdentifier: "testCell")
         setupHeaderTitle()
         setupCollectionView()
