@@ -9,7 +9,7 @@
 import UIKit
 
 extension UIColor {
-    static let backgroundColor = UIColor(red: 20/255, green: 20/255, blue: 20/255, alpha: 1.0)
+    static let backgroundColor = UIColor(red: 15/255, green: 15/255, blue: 15/255, alpha: 1.0)
     static let primaryFontColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1.0)
 }
 extension UIFont {

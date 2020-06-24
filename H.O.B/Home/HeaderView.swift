@@ -66,7 +66,7 @@ class HeaderView: UIView {
     
     var darkContainer: UIView = {
         let container = UIView()
-        container.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25)
+        container.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.70)
         container.translatesAutoresizingMaskIntoConstraints = false
         return container
     }()
@@ -113,10 +113,13 @@ class HeaderView: UIView {
         header.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
         line1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -60).isActive = true
+        
         line1.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
-        line2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        
+        //line2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         line2.topAnchor.constraint(equalTo: line1.bottomAnchor).isActive = true
-        line3.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 70).isActive = true
+        //line3.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 70).isActive = true
         line3.topAnchor.constraint(equalTo: line2.bottomAnchor).isActive = true
     }
 

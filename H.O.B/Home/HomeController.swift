@@ -19,6 +19,18 @@ class HomeController: StackController {
         add(CategoryController())
         add(WorkoutsController())
         add(TestimonialsController())
+        
+        let url = URL(string: "https://www.hausofbarzlv.com")!
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "Unknown error")
+                return
+            }
+            let decoder = JSONDecoder()
+            
+            
+        }
     }
     
     override func loadView() {

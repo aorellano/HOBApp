@@ -7,6 +7,6 @@
 //
 
 struct Featured {
-    static var titles = ["Small Mask", "Mask", "Camo Shorts", "Skully Hooded Pullover"]
+    static var titles = ["Small Mask", "Mask", "Camo Shorts", "Hoddie Pullover"]
     static var products = ["mask1", "mask2", "shorts", "jacket1"]
 }

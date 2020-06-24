@@ -9,6 +9,5 @@
 import UIKit
 
 struct Category: Codable {
-    var id: UUID?
-    var name: String
+    static var titles = ["All", "Tops", "Outwear", "Joggers", "Shorts", "Workout Sets", "Sports Bras", "Leggings", "Swimwear", "Accesories"]
 }

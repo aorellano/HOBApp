@@ -11,23 +11,22 @@ import UIKit
 class CategoryDataSource: NSObject, UICollectionViewDataSource {
     var categories = [Category]()
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell2", for: indexPath) as! CategoryCell
-        let category = object(at: indexPath)
-        cell.setup(category)
+        cell.setup(Category.titles[indexPath.row])
         return cell
     }
 }
 
-extension CategoryDataSource {
-    func object(at indexPath: IndexPath) -> Category {
-        return categories[indexPath.row]
-    }
-    
-    func update(with categories: [Category]) {
-        self.categories = categories
-    }
-}
+//extension CategoryDataSource {
+//    func object(at indexPath: IndexPath) -> Category {
+//        return categories[indexPath.row]
+//    }
+//
+//    func update(with categories: [Category]) {
+//        self.categories = categories
+//    }
+//}

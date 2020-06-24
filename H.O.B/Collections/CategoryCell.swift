@@ -13,6 +13,7 @@ class CategoryCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Mens"
         label.font = UIFont.collectionTitleFont
+        label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 16, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -35,8 +36,8 @@ class CategoryCell: UICollectionViewCell {
         setupProductImage()
     }
     
-    func setup(_ category: Category) {
-        productTitle.text = category.name
+    func setup(_ category: String) {
+        productTitle.text = category
     }
     
     override func layoutSubviews() {

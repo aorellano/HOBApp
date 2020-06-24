@@ -12,6 +12,7 @@ class FeaturedItemCell: UICollectionViewCell {
     let productTitle: UILabel = {
         let label = UILabel()
         label.text = "Mask"
+        label.textColor = .black
         label.font = UIFont.productTitleFont
         label.font = UIFont.systemFont(ofSize: 28, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -21,6 +22,7 @@ class FeaturedItemCell: UICollectionViewCell {
     let productDescription: UILabel = {
         let label = UILabel()
         label.text = "Shop the latest masks. Starting at $6 dollars and rep the haus of barz logo"
+        label.textColor = .black
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.productDescriptionFont
@@ -56,6 +58,7 @@ class FeaturedItemCell: UICollectionViewCell {
     
     func setup(_ title: String, _ image: UIImage) {
         self.productTitle.text = title
+        print("THis is it \(String(describing: productTitle.text))")
         self.productImage.image = image
     }
     
@@ -69,7 +72,7 @@ class FeaturedItemCell: UICollectionViewCell {
     func setupProductDescription() {
         addSubview(productDescription)
         
-        productDescription.topAnchor.constraint(equalTo: productTitle.bottomAnchor, constant: 20).isActive = true
+        productDescription.topAnchor.constraint(equalTo: productTitle.bottomAnchor, constant: 15).isActive = true
         productDescription.leadingAnchor.constraint(equalTo: productTitle.leadingAnchor).isActive = true
         productDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30).isActive = true
     }
