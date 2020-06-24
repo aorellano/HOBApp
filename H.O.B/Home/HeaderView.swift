@@ -28,8 +28,12 @@ class HeaderView: UIView {
     
     var line1: UILabel = {
         let label = UILabel()
-        label.text = "U N L E A S H"
-        label.textColor = UIColor.primaryFontColor
+        let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1.0)]
+        let attributes2 = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let attributedLetter = NSMutableAttributedString(string: "H", attributes: attributes1)
+        let attributedString = NSMutableAttributedString(string: "U N L E A S ", attributes: attributes2)
+        attributedString.append(attributedLetter)
+        label.attributedText = attributedString
         label.font = UIFont.descriptionFont
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,8 +42,14 @@ class HeaderView: UIView {
     
     var line2: UILabel = {
         let label = UILabel()
-        label.text = "F R O M"
-        label.textColor = UIColor.primaryFontColor
+        let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1.0)]
+        let attributes2 = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let attributedLetter = NSMutableAttributedString(string: " O ", attributes: attributes1)
+        let attributedStringFirst = NSMutableAttributedString(string: "F R", attributes: attributes2)
+        let attributedStringLast = NSMutableAttributedString(string: "M", attributes: attributes2)
+        attributedStringFirst.append(attributedLetter)
+        attributedStringFirst.append(attributedStringLast)
+        label.attributedText = attributedStringFirst
         label.font = UIFont.descriptionFont
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -47,8 +57,12 @@ class HeaderView: UIView {
     }()
     var line3: UILabel = {
         let label = UILabel()
-        label.text = "B E N E A T H"
-        label.textColor = UIColor.primaryFontColor
+        let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1.0)]
+        let attributes2 = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let attributedLetter = NSMutableAttributedString(string: "B ", attributes: attributes1)
+        let attributedString = NSMutableAttributedString(string: "E N E A T H", attributes: attributes2)
+        attributedLetter.append(attributedString)
+        label.attributedText = attributedLetter
         label.font = UIFont.descriptionFont
         label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false

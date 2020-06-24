@@ -16,7 +16,7 @@ class FeaturedItemsController: UIViewController {
         
         featuredItemsView.collectionView.delegate = self
         featuredItemsView.collectionView.dataSource = dataSource
-        var scrollView = featuredItemsView.collectionView
+       
     }
     override func loadView() {
         view = featuredItemsView
@@ -25,27 +25,20 @@ class FeaturedItemsController: UIViewController {
     
 }
 
-extension FeaturedItemsController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+extension FeaturedItemsController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        
-//        return CGSize(width: (UIScreen.main.bounds.width/1.1), height: (UIScreen.main.bounds.height/1.6))
-//    }
 }
 
 extension FeaturedItemsController: UIScrollViewDelegate {
-    func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        
-        let layout = featuredItemsView.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        let cellWidthIncludingSpacing = layout.itemSize.width + layout.minimumLineSpacing
-        
-        var offset = targetContentOffset.pointee
-        let index = (offset.x + scrollView.contentInset.left)/cellWidthIncludingSpacing
-        let roundedIndex = round(index)
-        
-        offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: scrollView.contentInset.top)
-        
-        targetContentOffset.pointee = offset
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        featuredItemsView.collectionView.scrollToNearestVisibleCollectionViewCell()
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            featuredItemsView.collectionView.scrollToNearestVisibleCollectionViewCell()
+        }
     }
 }
+
 

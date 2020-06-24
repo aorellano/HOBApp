@@ -43,6 +43,10 @@ class FeaturedItemCell: UICollectionViewCell {
     let buyButton: UIButton = {
         let button = UIButton()
         button.setTitle("Buy", for: .normal)
+        button.setTitleColor(UIColor(red: 60/255, green: 180/255, blue: 255/255, alpha: 1.0), for: .normal)
+        button.layer.cornerRadius = 15
+        button.layer.masksToBounds = true
+        button.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -53,7 +57,9 @@ class FeaturedItemCell: UICollectionViewCell {
         layer.cornerRadius = 20
         setupProductTitle()
         setupProductDescription()
+        setupBuyButton()
         setupProductImage()
+        
     }
     
     func setup(_ title: String, _ image: UIImage) {
@@ -83,7 +89,15 @@ class FeaturedItemCell: UICollectionViewCell {
         productImage.topAnchor.constraint(equalTo: productDescription.bottomAnchor, constant: 40).isActive = true
         productImage.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10).isActive = true
         productImage.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
-        productImage.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        productImage.bottomAnchor.constraint(equalTo: buyButton.topAnchor, constant: -2).isActive = true
+    }
+    
+    func setupBuyButton() {
+        addSubview(buyButton)
+        buyButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -10).isActive = true
+        buyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10).isActive = true
+        buyButton.widthAnchor.constraint(equalToConstant: 75).isActive = true
+        
     }
     
     required init?(coder: NSCoder) {

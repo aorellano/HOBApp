@@ -26,6 +26,7 @@ class FeaturedItemsView: UIView {
         layout.scrollDirection = .horizontal
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.backgroundColor = UIColor.backgroundColor
+        collectionView.decelerationRate = UIScrollView.DecelerationRate.fast
         
         let cellWidth = floor(UIScreen.main.bounds.width * 0.85)
         let cellHeight = floor(UIScreen.main.bounds.height * 0.6)
