@@ -27,6 +27,10 @@
 		D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161062490A63100C26A8C /* WorkoutsController.swift */; };
 		D07161092490A63E00C26A8C /* WorkoutsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07161082490A63E00C26A8C /* WorkoutsView.swift */; };
 		D09E3ED624A2CE3700136CE6 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09E3ED524A2CE3700136CE6 /* UICollectionView+Extension.swift */; };
+		D0A1B0FE24A40035009FAAB3 /* CartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1B0FD24A40035009FAAB3 /* CartController.swift */; };
+		D0A1B10024A40044009FAAB3 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1B0FF24A40044009FAAB3 /* CartView.swift */; };
+		D0A1B10224A41AEA009FAAB3 /* DropDownButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1B10124A41AEA009FAAB3 /* DropDownButton.swift */; };
+		D0A1B10424A41B15009FAAB3 /* DropDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A1B10324A41B15009FAAB3 /* DropDownView.swift */; };
 		D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5A5A7248A191500C87F2E /* HeaderView.swift */; };
 		D0B5A5AB248ACA9600C87F2E /* FeaturedItemsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5A5AA248ACA9600C87F2E /* FeaturedItemsController.swift */; };
 		D0B5A5AD248ACACA00C87F2E /* FeaturedItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0B5A5AC248ACACA00C87F2E /* FeaturedItemsView.swift */; };
@@ -72,6 +76,10 @@
 		D07161062490A63100C26A8C /* WorkoutsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsController.swift; sourceTree = "<group>"; };
 		D07161082490A63E00C26A8C /* WorkoutsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsView.swift; sourceTree = "<group>"; };
 		D09E3ED524A2CE3700136CE6 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		D0A1B0FD24A40035009FAAB3 /* CartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartController.swift; sourceTree = "<group>"; };
+		D0A1B0FF24A40044009FAAB3 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		D0A1B10124A41AEA009FAAB3 /* DropDownButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownButton.swift; sourceTree = "<group>"; };
+		D0A1B10324A41B15009FAAB3 /* DropDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownView.swift; sourceTree = "<group>"; };
 		D0B5A5A7248A191500C87F2E /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D0B5A5AA248ACA9600C87F2E /* FeaturedItemsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemsController.swift; sourceTree = "<group>"; };
 		D0B5A5AC248ACACA00C87F2E /* FeaturedItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedItemsView.swift; sourceTree = "<group>"; };
@@ -158,6 +166,17 @@
 			path = Workouts;
 			sourceTree = "<group>";
 		};
+		D0A1B0FC24A40020009FAAB3 /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				D0A1B0FD24A40035009FAAB3 /* CartController.swift */,
+				D0A1B0FF24A40044009FAAB3 /* CartView.swift */,
+				D0A1B10124A41AEA009FAAB3 /* DropDownButton.swift */,
+				D0A1B10324A41B15009FAAB3 /* DropDownView.swift */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		D0B5A5A9248ACA5300C87F2E /* Featured */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +231,7 @@
 		D0D079702488C2CA00CF9F8B /* H.O.B */ = {
 			isa = PBXGroup;
 			children = (
+				D0A1B0FC24A40020009FAAB3 /* ShoppingCart */,
 				D06EDFA4249D9F7C00566AE2 /* Authentication */,
 				D07161052490A61000C26A8C /* Workouts */,
 				D07161002490A5EE00C26A8C /* Testimonials */,
@@ -391,17 +411,20 @@
 				D06EDFAE249DAD5600566AE2 /* TestCell.swift in Sources */,
 				D0B5A5C1248C747B00C87F2E /* CategoryDataSource.swift in Sources */,
 				D0D079762488C2CA00CF9F8B /* HomeController.swift in Sources */,
+				D0A1B0FE24A40035009FAAB3 /* CartController.swift in Sources */,
 				D0B5A5A8248A191500C87F2E /* HeaderView.swift in Sources */,
 				D07161022490A60200C26A8C /* TestimonialsController.swift in Sources */,
 				D06EDFA6249D9F9800566AE2 /* LoginController.swift in Sources */,
 				D0B5A5AD248ACACA00C87F2E /* FeaturedItemsView.swift in Sources */,
 				D07161072490A63100C26A8C /* WorkoutsController.swift in Sources */,
+				D0A1B10424A41B15009FAAB3 /* DropDownView.swift in Sources */,
 				D06EDFAA249DA12500566AE2 /* LoginInputContainer.swift in Sources */,
 				D056B2BA249EF14A00195EA9 /* Featured.swift in Sources */,
 				D0B5A5B3248B299800C87F2E /* FeaturedItemsDataSource.swift in Sources */,
 				D07161042490A60B00C26A8C /* TestimonialsView.swift in Sources */,
 				D06EDFA3249D7C9300566AE2 /* AccountCell.swift in Sources */,
 				D0D079902488CA4500CF9F8B /* HomeView.swift in Sources */,
+				D0A1B10024A40044009FAAB3 /* CartView.swift in Sources */,
 				D056B2B6249EA2A300195EA9 /* ShippingController.swift in Sources */,
 				D0B5A5B1248AD08C00C87F2E /* HeaderController.swift in Sources */,
 				D0D0798E2488C46500CF9F8B /* TabController.swift in Sources */,
@@ -418,6 +441,7 @@
 				D06EDFA1249D7B5B00566AE2 /* AccountView.swift in Sources */,
 				D06EDFA8249D9FC300566AE2 /* LoginView.swift in Sources */,
 				D056B2B8249EE64400195EA9 /* Testimonial.swift in Sources */,
+				D0A1B10224A41AEA009FAAB3 /* DropDownButton.swift in Sources */,
 				D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */,
 				D0D079872488C40700CF9F8B /* EncouragmentController.swift in Sources */,
 				D06EDFAC249DAC0600566AE2 /* TestDataSource.swift in Sources */,

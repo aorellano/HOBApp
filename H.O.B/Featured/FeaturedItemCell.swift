@@ -59,6 +59,7 @@ class FeaturedItemCell: UICollectionViewCell {
         setupProductDescription()
         setupBuyButton()
         setupProductImage()
+       
         
     }
     

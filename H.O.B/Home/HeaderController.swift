@@ -42,7 +42,7 @@ class HeaderController: UIViewController {
         
         UIView.animate(withDuration: 0.7, delay: 0.0, options: .curveEaseInOut, animations: { [weak self] in
             self?.line1StartingConstraint.isActive = false
-            self?.line1FinishedConstraint = self?.headerView.line1.centerXAnchor.constraint(equalTo: (self?.view.centerXAnchor) as! NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: -60)
+            self?.line1FinishedConstraint = self?.headerView.line1.centerXAnchor.constraint(equalTo: (self?.view.centerXAnchor) as! NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: -70)
             self?.line1FinishedConstraint.isActive = true
             self?.view.layoutIfNeeded()
         })
@@ -56,7 +56,7 @@ class HeaderController: UIViewController {
         
         UIView.animate(withDuration: 0.99, delay: 0.99, options: .curveEaseInOut, animations: { [weak self] in
             self?.line3StartingConstraint.isActive = false
-            self?.line3FinishedConstraint = self?.headerView.line3.centerXAnchor.constraint(equalTo: (self?.view.centerXAnchor) as! NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: 70)
+            self?.line3FinishedConstraint = self?.headerView.line3.centerXAnchor.constraint(equalTo: (self?.view.centerXAnchor) as! NSLayoutAnchor<NSLayoutXAxisAnchor>, constant: 80)
             self?.line3FinishedConstraint.isActive = true
             self?.view.layoutIfNeeded()
         })

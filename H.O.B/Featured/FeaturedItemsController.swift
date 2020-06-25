@@ -16,8 +16,13 @@ class FeaturedItemsController: UIViewController {
         
         featuredItemsView.collectionView.delegate = self
         featuredItemsView.collectionView.dataSource = dataSource
-       
+  
     }
+    
+
+    
+   
+    
     override func loadView() {
         view = featuredItemsView
         
@@ -26,7 +31,12 @@ class FeaturedItemsController: UIViewController {
 }
 
 extension FeaturedItemsController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+         let vc = CartController()
+               navigationController?.pushViewController(vc, animated: true)
+    }
+        
+        
 }
 
 extension FeaturedItemsController: UIScrollViewDelegate {
