@@ -142,8 +142,8 @@
             filePath = "H.O.B/ShoppingCart/CartView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "314"
-            endingLineNumber = "314"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "setupProductContainer()"
             landmarkType = "7">
          </BreakpointContent>

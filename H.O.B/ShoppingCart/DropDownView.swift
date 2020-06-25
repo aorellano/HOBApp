@@ -10,7 +10,7 @@ import UIKit
 
 class DropDownView: UIView {
     
-    var dropDownOptions  = ["Calories", "Fat", "Cholesterol", "Potassium", "Protein", "Sugar"]
+    var dropDownOptions  = ["Priority Mail - $11.90", "Priority Mail Express - $43.75", "Store Pickup", "Potassium"]
     var tableView = UITableView()
 
     override init(frame: CGRect) {

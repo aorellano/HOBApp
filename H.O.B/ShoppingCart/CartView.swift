@@ -11,7 +11,7 @@ import UIKit
 class CartView: UIView {
     let titleLabel: UILabel = {
         let label = UILabel()
-        label.text = "Cart"
+        label.text = "Buy Item"
         label.font = UIFont.secondaryFont
         label.font = UIFont.systemFont(ofSize: 40, weight: .bold)
         label.textColor = .white
@@ -184,81 +184,8 @@ class CartView: UIView {
         return line
     }()
     
-    let orderSummary: UILabel = {
-        let label = UILabel()
-        label.text = "Order Summary"
-        label.font = UIFont.secondaryFont
-        label.font = UIFont.systemFont(ofSize: 23, weight: .bold)
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let subTotalLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Subtotal"
-        label.textColor = .white
-        label.font = UIFont.collectionTitleFont
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let shippingLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Shipping"
-        label.textColor = .white
-        label.font = UIFont.collectionTitleFont
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let lineBreak3: UIView = {
-        let line = UIView()
-        line.backgroundColor = .gray
-        line.translatesAutoresizingMaskIntoConstraints = false
-        return line
-    }()
-    
-    let dropDownButton = DropDownButton()
-    
-    let totalAmountLabel: UILabel = {
-        let label = UILabel()
-        label.text = "Total:"
-        label.font = UIFont.secondaryFont
-        label.font = UIFont.systemFont(ofSize: 23, weight: .bold)
-        label.textColor = .white
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let subTotalPriceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "$8.00"
-        label.font = UIFont.collectionTitleFont
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
-    }()
-    
-    let shippingPriceLabel: UILabel = {
-        let label = UILabel()
-        label.text = "$5.00"
-        label.font = UIFont.collectionTitleFont
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        return label
-    }()
-    
-    let totalPriceLabel: UILabel = {
-        let label =  UILabel()
-        label.text = "$13.00"
-        label.font = UIFont.collectionTitleFont
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
-        return label
-    }()
-    
-    
+    let orderSummaryView = OrderSummaryView()
+
     let addToCartButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .purple
@@ -289,8 +216,8 @@ class CartView: UIView {
         setupQuantityContainer()
         setupEditSizeSection()
         setupEditColorSection()
-        setupOrderSummary()
         setupTotalAmountSection()
+
     }
     
     func setupTitleLabel() {
@@ -407,52 +334,28 @@ class CartView: UIView {
         lineBreak2.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
     }
-    
-    func setupOrderSummary() {
-        addSubview(orderSummary)
-        addSubview(subTotalLabel)
-    
-        addSubview(shippingLabel)
-        addSubview(dropDownButton)
-        addSubview(lineBreak3)
-        orderSummary.topAnchor.constraint(equalTo: lineBreak2.bottomAnchor, constant: 30).isActive = true
-        orderSummary.leadingAnchor.constraint(equalTo: editSizeLabel.leadingAnchor).isActive = true
-        
-        subTotalLabel.leadingAnchor.constraint(equalTo: orderSummary.leadingAnchor).isActive = true
-        subTotalLabel.topAnchor.constraint(equalTo: orderSummary.bottomAnchor, constant: 20).isActive = true
-        
-        
-        shippingLabel.leadingAnchor.constraint(equalTo: orderSummary.leadingAnchor).isActive = true
-        shippingLabel.topAnchor.constraint(equalTo: subTotalLabel.bottomAnchor, constant: 10).isActive = true
-        
-        dropDownButton.topAnchor.constraint(equalTo: shippingLabel.bottomAnchor, constant: 15).isActive = true
-        dropDownButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        dropDownButton.leadingAnchor.constraint(equalTo: shippingLabel.leadingAnchor).isActive = true
-        dropDownButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        
-        lineBreak3.leadingAnchor.constraint(equalTo: orderSummary.leadingAnchor).isActive = true
-        lineBreak3.heightAnchor.constraint(equalToConstant: 1.5).isActive = true
-        lineBreak3.topAnchor.constraint(equalTo: dropDownButton.bottomAnchor, constant: 20).isActive = true
-        lineBreak3.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-    }
-    
+
     func setupTotalAmountSection() {
-        addSubview(totalAmountLabel)
+        
         addSubview(addToCartButton)
         addSubview(buyButton)
+        addSubview(orderSummaryView)
         
-        totalAmountLabel.topAnchor.constraint(equalTo: lineBreak3.bottomAnchor, constant: 30).isActive = true
-        totalAmountLabel.leadingAnchor.constraint(equalTo: editSizeLabel.leadingAnchor).isActive = true
+        orderSummaryView.leadingAnchor.constraint(equalTo: lineBreak2.leadingAnchor).isActive = true
+        orderSummaryView.topAnchor.constraint(equalTo: lineBreak2.bottomAnchor, constant: 30).isActive = true
+        orderSummaryView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        orderSummaryView.bottomAnchor.constraint(equalTo: addToCartButton.topAnchor).isActive = true
         
+       
         addToCartButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
         addToCartButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         addToCartButton.trailingAnchor.constraint(equalTo: centerXAnchor, constant: -10).isActive = true
-        addToCartButton.topAnchor.constraint(equalTo: totalAmountLabel.bottomAnchor, constant: 20).isActive = true
+        addToCartButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -40).isActive = true
         
         buyButton.leadingAnchor.constraint(equalTo: centerXAnchor, constant: 10).isActive = true
         buyButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         buyButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
-        buyButton.topAnchor.constraint(equalTo: totalAmountLabel.bottomAnchor, constant: 20).isActive = true
+        buyButton.centerYAnchor.constraint(equalTo: addToCartButton.centerYAnchor).isActive = true
     }
     
     
