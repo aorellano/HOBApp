@@ -40,16 +40,18 @@ class FeaturedItemCell: UICollectionViewCell {
         return imageView
     }()
     
-    let buyButton: UIButton = {
+    lazy var buyButton: UIButton = {
         let button = UIButton()
         button.setTitle("Buy", for: .normal)
         button.setTitleColor(UIColor(red: 60/255, green: 180/255, blue: 255/255, alpha: 1.0), for: .normal)
         button.layer.cornerRadius = 15
         button.layer.masksToBounds = true
         button.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.08)
+
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
+
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -59,10 +61,9 @@ class FeaturedItemCell: UICollectionViewCell {
         setupProductDescription()
         setupBuyButton()
         setupProductImage()
-       
-        
     }
     
+
     func setup(_ title: String, _ image: UIImage) {
         self.productTitle.text = title
         print("THis is it \(String(describing: productTitle.text))")

@@ -137,10 +137,10 @@ class OrderSummaryView: UIView {
         addSubview(totalPriceLabel)
         
         totalAmountLabel.topAnchor.constraint(equalTo: lineBreak3.bottomAnchor, constant: 30).isActive = true
-               totalAmountLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        totalAmountLabel.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
                
-               totalPriceLabel.centerYAnchor.constraint(equalTo: totalAmountLabel.centerYAnchor).isActive = true
-               totalPriceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
+        totalPriceLabel.centerYAnchor.constraint(equalTo: totalAmountLabel.centerYAnchor).isActive = true
+        totalPriceLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20).isActive = true
                
 
     }

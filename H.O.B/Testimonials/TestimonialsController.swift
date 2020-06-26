@@ -8,17 +8,17 @@
 import UIKit
 
 class TestimonialsController: UIViewController {
-    let motivationView = TestimonialsView()
+    let testimonialsView = TestimonialsView()
     let dataSource = TestDataSource()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        motivationView.collectionView.delegate = self
-        motivationView.collectionView.dataSource = dataSource
+        testimonialsView.collectionView.delegate = self
+        testimonialsView.collectionView.dataSource = dataSource
     }
     
     override func loadView() {
-        view = motivationView
+        view = testimonialsView
     }
 }
 
@@ -28,5 +28,17 @@ extension TestimonialsController:  UICollectionViewDelegate, UICollectionViewDel
        
        return CGSize(width: (UIScreen.main.bounds.width/1.1), height: (UIScreen.main.bounds.height/1.6))
         //return CGSize(width: (collectionView.bounds.width/2.1), height: 300)
+    }
+}
+
+extension TestimonialsController: UIScrollViewDelegate {
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        testimonialsView.collectionView.scrollToNearestVisibleCollectionViewCell()
+    }
+
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        if !decelerate {
+            testimonialsView.collectionView.scrollToNearestVisibleCollectionViewCell()
+        }
     }
 }

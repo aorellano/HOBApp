@@ -18,11 +18,11 @@ class FeaturedItemsController: UIViewController {
         featuredItemsView.collectionView.dataSource = dataSource
   
     }
-    
+    @objc func buyButtonPressed() {
+        let vc = BuyController()
+        navigationController?.pushViewController(vc, animated: true)
+    }
 
-    
-   
-    
     override func loadView() {
         view = featuredItemsView
         
@@ -32,7 +32,9 @@ class FeaturedItemsController: UIViewController {
 
 extension FeaturedItemsController: UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-         let vc = CartController()
+        let cell = collectionView.cellForItem(at: indexPath)
+       
+         let vc = BuyController()
                navigationController?.pushViewController(vc, animated: true)
     }
         
