@@ -50,8 +50,8 @@ class CartView: UIView {
     let checkoutButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .systemBlue
-        button.layer.cornerRadius = 30
-        button.setTitle("Buy", for: .normal)
+        button.layer.cornerRadius = 20
+        button.setTitle("Checkout", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -81,7 +81,7 @@ class CartView: UIView {
     func setupTitleLabel() {
         addSubview(titleLabel)
         
-        titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant:  20).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant:  30).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 40).isActive = true
     }
     

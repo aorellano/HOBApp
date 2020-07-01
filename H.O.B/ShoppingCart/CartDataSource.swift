@@ -17,7 +17,5 @@ class CartDataSource: NSObject, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cart", for: indexPath) as! CartCell
         return cell
     }
-    
-    
-    
+
 }

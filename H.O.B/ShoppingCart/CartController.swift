@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CartController: UIViewController {
+class CartController: UIViewController{
     let cartView = CartView()
     let dataSource = CartDataSource()
     override func viewDidLoad() {
@@ -17,13 +17,12 @@ class CartController: UIViewController {
         cartView.tableView.dataSource = dataSource
         cartView.tableView.delegate = self
         
-        
+        cartView.checkoutButton.addTarget(self, action: #selector(checkoutButtonPressed), for: .touchUpInside)
     }
     
-
-    
-    @objc func buyButtonPressed() {
-        print("Buy button was pressed")
+    @objc func checkoutButtonPressed() {
+        let vc = CheckoutController()
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     override func loadView() {
@@ -32,5 +31,7 @@ class CartController: UIViewController {
 }
 
 extension CartController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
 }

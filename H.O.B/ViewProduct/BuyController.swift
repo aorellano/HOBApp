@@ -13,10 +13,16 @@ class BuyController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        buyView.addToCartButton.addTarget(self, action: #selector(buyButtonPressed), for: .touchUpInside)
+        buyView.addToCartButton.addTarget(self, action: #selector(checkoutButtonPressed), for: .touchUpInside)
+        buyView.buyButton.addTarget(self, action: #selector(buyButtonPressed), for: .touchUpInside)
     }
     
     @objc func buyButtonPressed() {
+       let vc = CheckoutController()
+        navigationController?.pushViewController(vc, animated: false)
+    }
+    
+    @objc func checkoutButtonPressed() {
         let vc = CartController()
         vc.modalPresentationStyle = .pageSheet
         present(vc, animated: true)

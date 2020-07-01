@@ -34,7 +34,7 @@ extension FeaturedItemsController: UICollectionViewDelegateFlowLayout, UICollect
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
        
-         let vc = BuyController()
+         let vc = ViewProductController()
                navigationController?.pushViewController(vc, animated: true)
     }
         

@@ -16,7 +16,6 @@ class CategoryController: UIViewController {
         
         categoryView.productsCollectionView.dataSource = dataSource
         categoryView.productsCollectionView.delegate = self
-        
         fetchData()
         print("THIS IS THE CATEGORIES \(dataSource.categories.count)")
     }
@@ -29,7 +28,7 @@ class CategoryController: UIViewController {
                 print(error?.localizedDescription ?? "Unknown error")
                 return
             }
-            
+        
             let decoder = JSONDecoder()
             
             if let categories = try? decoder.decode([Category].self, from: data) {
@@ -50,5 +49,10 @@ class CategoryController: UIViewController {
 extension CategoryController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.width/2.4, height: UIScreen.main.bounds.height/3.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc = ProductsController()
+        navigationController?.pushViewController(vc, animated: false)
     }
 }
