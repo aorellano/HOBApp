@@ -9,4 +9,6 @@ target 'H.O.B' do
 
 pod 'youtube-ios-player-helper'
 
+pod 'SwiftLint'
+
 end

@@ -129,7 +129,7 @@ class ViewProductView: UIView {
         imageContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
         imageContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         imageContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        imageContainer.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/2.5).isActive = true
+        imageContainer.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height/2.6).isActive = true
         //imageContainer.heightAnchor.constraint(equalToConstant: 350).isActive = true
         
         productImage.leadingAnchor.constraint(equalTo: imageContainer.leadingAnchor).isActive = true
@@ -155,7 +155,7 @@ class ViewProductView: UIView {
     
     func setupProductTitle() {
         addSubview(productTitle)
-        productTitle.topAnchor.constraint(equalTo: imagesCollectionView.bottomAnchor, constant: 10).isActive = true
+        productTitle.topAnchor.constraint(equalTo: imagesCollectionView.bottomAnchor, constant: 15).isActive = true
         productTitle.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20).isActive = true
     }
     
