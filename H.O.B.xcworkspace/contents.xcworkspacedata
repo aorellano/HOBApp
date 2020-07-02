@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/alexisorellano/Desktop/H.O.B/H.O.B/Settings/ContactView.swift">
+   </FileRef>
+   <FileRef
       location = "group:H.O.B.xcodeproj">
    </FileRef>
    <FileRef

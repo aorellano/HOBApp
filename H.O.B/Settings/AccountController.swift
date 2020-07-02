@@ -20,7 +20,7 @@ class AccountController: UITableViewController {
         tableView.backgroundColor = UIColor.backgroundColor
         tableView.separatorColor = .darkGray
         tableView.contentInset = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 0)
-        }
+    }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 4
@@ -69,7 +69,9 @@ class AccountController: UITableViewController {
         } else if indexPath.section == 1 && indexPath.row == 0 {
             //cell.textLabel?.text = "About Us"
         } else if indexPath.section == 1 && indexPath.row == 1 {
-            //cell.textLabel?.text = "Contact Us"
+            let contactController = ContactController()
+            contactController.modalPresentationStyle = .formSheet
+            present(contactController, animated: true)
         } else if indexPath.section == 2 && indexPath.row == 0 {
             let shippingController = ShippingController()
             shippingController.modalPresentationStyle = .formSheet
@@ -79,7 +81,9 @@ class AccountController: UITableViewController {
 //            privacyController.modalPresentationStyle = .formSheet
 //            self.present(privacyController, animated: true)
         } else if indexPath.section == 2 && indexPath.row == 2 {
-            //cell.textLabel?.text = "Terms & Conditions"
+            let termsController = TermsController()
+            termsController.modalPresentationStyle = .formSheet
+            self.present(termsController, animated: true)
         } else {
             let loginController = LoginController()
             loginController.modalPresentationStyle = .formSheet

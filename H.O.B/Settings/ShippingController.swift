@@ -50,7 +50,7 @@ class ShippingController: UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.productDescriptionFont
-        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 10, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -74,7 +74,7 @@ class ShippingController: UIViewController {
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.productDescriptionFont
-        label.font = UIFont.systemFont(ofSize: 12, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 10, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
