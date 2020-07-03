@@ -63,6 +63,8 @@
 		D0BBE6A124AD3A3500AE6C8C /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBE6A024AD3A3500AE6C8C /* ContactView.swift */; };
 		D0BBE6A324AD7BDB00AE6C8C /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBE6A224AD7BDB00AE6C8C /* TermsController.swift */; };
 		D0BBE6A524AD897D00AE6C8C /* TermsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBE6A424AD897D00AE6C8C /* TermsCell.swift */; };
+		D0BBE6A724AFE2FB00AE6C8C /* PolicyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBE6A624AFE2FB00AE6C8C /* PolicyController.swift */; };
+		D0BBE6A924AFE35700AE6C8C /* PolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0BBE6A824AFE35700AE6C8C /* PolicyView.swift */; };
 		D0D079722488C2CA00CF9F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D079712488C2CA00CF9F8B /* AppDelegate.swift */; };
 		D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D079732488C2CA00CF9F8B /* SceneDelegate.swift */; };
 		D0D079762488C2CA00CF9F8B /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0D079752488C2CA00CF9F8B /* HomeController.swift */; };
@@ -133,6 +135,8 @@
 		D0BBE6A024AD3A3500AE6C8C /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactView.swift; path = /Users/alexisorellano/Desktop/H.O.B/H.O.B/Settings/ContactView.swift; sourceTree = "<absolute>"; };
 		D0BBE6A224AD7BDB00AE6C8C /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		D0BBE6A424AD897D00AE6C8C /* TermsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsCell.swift; sourceTree = "<group>"; };
+		D0BBE6A624AFE2FB00AE6C8C /* PolicyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyController.swift; sourceTree = "<group>"; };
+		D0BBE6A824AFE35700AE6C8C /* PolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolicyView.swift; sourceTree = "<group>"; };
 		D0D0796E2488C2CA00CF9F8B /* H.O.B.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = H.O.B.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D079712488C2CA00CF9F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0D079732488C2CA00CF9F8B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -367,6 +371,8 @@
 				D0BBE6A024AD3A3500AE6C8C /* ContactView.swift */,
 				D0BBE6A224AD7BDB00AE6C8C /* TermsController.swift */,
 				D0BBE6A424AD897D00AE6C8C /* TermsCell.swift */,
+				D0BBE6A624AFE2FB00AE6C8C /* PolicyController.swift */,
+				D0BBE6A824AFE35700AE6C8C /* PolicyView.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -549,6 +555,7 @@
 				D0A1B10224A41AEA009FAAB3 /* DropDownButton.swift in Sources */,
 				D0BBE6A324AD7BDB00AE6C8C /* TermsController.swift in Sources */,
 				D0D079742488C2CA00CF9F8B /* SceneDelegate.swift in Sources */,
+				D0BBE6A924AFE35700AE6C8C /* PolicyView.swift in Sources */,
 				D0D079872488C40700CF9F8B /* EncouragmentController.swift in Sources */,
 				D06EDFAC249DAC0600566AE2 /* TestDataSource.swift in Sources */,
 				D09E3ED624A2CE3700136CE6 /* UICollectionView+Extension.swift in Sources */,
@@ -557,6 +564,7 @@
 				D0B5A5BF248C73C200C87F2E /* CategoryCell.swift in Sources */,
 				D0BBE6A524AD897D00AE6C8C /* TermsCell.swift in Sources */,
 				D06EDF9F249862FA00566AE2 /* Category.swift in Sources */,
+				D0BBE6A724AFE2FB00AE6C8C /* PolicyController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

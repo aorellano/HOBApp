@@ -77,9 +77,9 @@ class AccountController: UITableViewController {
             shippingController.modalPresentationStyle = .formSheet
             self.present(shippingController, animated: true)
         } else if indexPath.section == 2 && indexPath.row == 1 {
-//            let privacyController = PrivacyController()
-//            privacyController.modalPresentationStyle = .formSheet
-//            self.present(privacyController, animated: true)
+            let policyController = PolicyController()
+            policyController.modalPresentationStyle = .formSheet
+            self.present(policyController, animated: true)
         } else if indexPath.section == 2 && indexPath.row == 2 {
             let termsController = TermsController()
             termsController.modalPresentationStyle = .formSheet
