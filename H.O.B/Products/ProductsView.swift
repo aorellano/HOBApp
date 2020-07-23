@@ -28,6 +28,8 @@ class ProductsView: UIView {
         setupCollectionView()
     }
     
+
+    
     func setupCollectionView() {
         addSubview(collectionView)
         

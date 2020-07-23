@@ -15,13 +15,13 @@ class CheckoutView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        setupScrollView()
+        //setupScrollView()
         setupPageControl()
     }
     
     func setupScrollView() {
         addSubview(scrollView)
-        
+
         scrollView.backgroundColor = UIColor.backgroundColor
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
@@ -31,14 +31,14 @@ class CheckoutView: UIView {
     }
     
     func setupPageControl() {
-        scrollView.addSubview(pageControl)
+        addSubview(pageControl)
         
         pageControl.numberOfPages = 4
         pageControl.backgroundColor = .blue
         pageControl.heightAnchor.constraint(equalToConstant: 50).isActive = true
         pageControl.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width).isActive = true
         pageControl.translatesAutoresizingMaskIntoConstraints = false
-        pageControl.topAnchor.constraint(equalTo: topAnchor, constant: 80).isActive = true
+        pageControl.topAnchor.constraint(equalTo: topAnchor, constant: 20).isActive = true
         pageControl.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     }
     

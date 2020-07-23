@@ -21,14 +21,19 @@ class TabController: UITabBarController, UITabBarControllerDelegate {
         
         let tabOne = HomeController()
         let tabOneItem = UITabBarItem(title: "Home", image: UIImage(named: "house"), tag: 0)
-        let tabTwo = EncouragmentController()
-        let tabTwoItem = UITabBarItem(title: "Encouragment", image: UIImage(named: "heart"), tag: 1)
-        let tabThree = AccountController()
-        let tabThreeItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings"), tag: 2)
+        
+        let tabTwo = ProductsController()
+        let tabTwoItem = UITabBarItem(title: "Shop", image: UIImage(named: "tag"), tag: 1)
+        let tabThree = EncouragmentController()
+        let tabThreeItem = UITabBarItem(title: "Encouragment", image: UIImage(named: "heart"), tag: 1)
+        
+        let tabFour = AccountController()
+        let tabFourItem = UITabBarItem(title: "Settings", image: UIImage(named: "settings"), tag: 2)
         tabOne.tabBarItem = tabOneItem
         tabTwo.tabBarItem = tabTwoItem
         tabThree.tabBarItem = tabThreeItem
+        tabFour.tabBarItem = tabFourItem
         
-        self.viewControllers = [tabOne, tabTwo, tabThree]
+        self.viewControllers = [tabOne, tabTwo, tabThree, tabFour]
     }
 }

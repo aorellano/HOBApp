@@ -21,8 +21,11 @@ class CartController: UIViewController{
     }
     
     @objc func checkoutButtonPressed() {
+        print("button being pressed")
         let vc = CheckoutController()
-        navigationController?.pushViewController(vc, animated: false)
+        vc.modalPresentationStyle = .formSheet
+        present(vc, animated: true)
+        //navigationController?.pushViewController(vc, animated: true)
     }
     
     override func loadView() {

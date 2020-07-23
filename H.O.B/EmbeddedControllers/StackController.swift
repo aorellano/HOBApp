@@ -9,8 +9,8 @@
 import UIKit
 
 class StackController: UIViewController {
-    private let scrollView = UIScrollView()
-    private let stackView = UIStackView()
+    let scrollView = UIScrollView()
+    let stackView = UIStackView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,13 +18,15 @@ class StackController: UIViewController {
         scrollView.addSubview(stackView)
         setupConstraints()
         stackView.axis = .vertical
-    }
-
-    private func setupConstraints() {
+        scrollView.backgroundColor = UIColor.backgroundColor
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
+    }
+
+    func setupConstraints() {
         
-        scrollView.backgroundColor = UIColor.backgroundColor
+        
+       
         NSLayoutConstraint.activate([
             scrollView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),

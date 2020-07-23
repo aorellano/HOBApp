@@ -49,6 +49,11 @@ class ProductCell: UICollectionViewCell {
         setupProductTitle()
         setupProductImage()
      }
+    
+    func setup(_ product: Product) {
+        productTitle.text = product.name
+        priceTitle.text = "$"+String(format: "%.2f", product.price as! CVarArg)
+    }
 
     
 //     func setup(_ category: String) {

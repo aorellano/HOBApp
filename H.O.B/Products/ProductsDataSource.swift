@@ -9,15 +9,18 @@
 import UIKit
 
 class ProductsDataSource: NSObject, UICollectionViewDataSource {
+    var data = [Product]()
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 10
+        return 2
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product", for: indexPath) as! ProductCell
+        let product = object(at: indexPath)
+        cell.setup(product)
         return cell
     }
     
@@ -28,4 +31,14 @@ class ProductsDataSource: NSObject, UICollectionViewDataSource {
         return sectionHeader
     }
 
+}
+
+extension ProductsDataSource {
+    func object(at indexPath: IndexPath) -> Product {
+        return data[indexPath.row]
+    }
+    
+    func update(with data: [Product]) {
+        self.data = data
+    }
 }

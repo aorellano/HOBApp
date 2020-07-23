@@ -9,21 +9,55 @@
 import UIKit
 
 class HeaderView: UIView {
-    var header: UILabel = {
+    var header1: UILabel = {
         let label = UILabel()
         label.text = """
-        H  A  U  S
-        O  F
-        B  A  R  Z
+        H A U S
         """
         label.textAlignment = .center
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         label.textColor = UIColor.primaryFontColor
         label.font = UIFont.primaryFont
-        label.font = UIFont.systemFont(ofSize: 60, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 64, weight: .semibold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
+    }()
+    var header2: UILabel = {
+        let label = UILabel()
+        label.text = """
+        O F
+        """
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.textColor = UIColor.primaryFontColor
+        label.font = UIFont.primaryFont
+        label.font = UIFont.systemFont(ofSize: 55, weight: .regular)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    var header3: UILabel = {
+        let label = UILabel()
+        label.text = """
+        B A R Z
+        """
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        label.lineBreakMode = .byWordWrapping
+        label.textColor = UIColor.primaryFontColor
+        label.font = UIFont.primaryFont
+        label.font = UIFont.systemFont(ofSize: 64, weight: .semibold)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    var headerImage: UIImageView = {
+        let image = UIImage(named: "splash")
+        let imageView = UIImageView()
+        imageView.image = image
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
     
     var line1: UILabel = {
@@ -31,11 +65,11 @@ class HeaderView: UIView {
         let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1.0)]
         let attributes2 = [NSAttributedString.Key.foregroundColor: UIColor.white]
         let attributedLetter = NSMutableAttributedString(string: "H", attributes: attributes1)
-        let attributedString = NSMutableAttributedString(string: "U N L E A S ", attributes: attributes2)
+        let attributedString = NSMutableAttributedString(string: "U  N  L  E  A  S  ", attributes: attributes2)
         attributedString.append(attributedLetter)
         label.attributedText = attributedString
         label.font = UIFont.descriptionFont
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .light)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -44,14 +78,14 @@ class HeaderView: UIView {
         let label = UILabel()
         let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1.0)]
         let attributes2 = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let attributedLetter = NSMutableAttributedString(string: " O ", attributes: attributes1)
-        let attributedStringFirst = NSMutableAttributedString(string: "F R", attributes: attributes2)
+        let attributedLetter = NSMutableAttributedString(string: "  O  ", attributes: attributes1)
+        let attributedStringFirst = NSMutableAttributedString(string: "F  R", attributes: attributes2)
         let attributedStringLast = NSMutableAttributedString(string: "M", attributes: attributes2)
         attributedStringFirst.append(attributedLetter)
         attributedStringFirst.append(attributedStringLast)
         label.attributedText = attributedStringFirst
         label.font = UIFont.descriptionFont
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .light)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -59,81 +93,51 @@ class HeaderView: UIView {
         let label = UILabel()
         let attributes1 = [NSAttributedString.Key.foregroundColor: UIColor(red: 255/255, green: 215/255, blue: 0/255, alpha: 1.0)]
         let attributes2 = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let attributedLetter = NSMutableAttributedString(string: "B ", attributes: attributes1)
-        let attributedString = NSMutableAttributedString(string: "E N E A T H", attributes: attributes2)
+        let attributedLetter = NSMutableAttributedString(string: "B  ", attributes: attributes1)
+        let attributedString = NSMutableAttributedString(string: "E  N  E  A  T  H", attributes: attributes2)
         attributedLetter.append(attributedString)
         label.attributedText = attributedLetter
         label.font = UIFont.descriptionFont
-        label.font = UIFont.systemFont(ofSize: 20, weight: .medium)
+        label.font = UIFont.systemFont(ofSize: 20, weight: .light)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
-    var backgroundImage: UIImageView = {
-        let imageView = UIImageView()
-        let image = UIImage(named: "small")
-        imageView.image = image
-        imageView.contentMode = .scaleAspectFill
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
-    }()
-    
-    var darkContainer: UIView = {
-        let container = UIView()
-        container.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.70)
-        container.translatesAutoresizingMaskIntoConstraints = false
-        return container
-    }()
-    
-    var container: UIView = {
-        let view = UIView()
-        view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.25)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         translatesAutoresizingMaskIntoConstraints = false
-        setupBackground()
+        backgroundColor = .black
+
         setupHeader()
         
         self.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.height).isActive = true
     }
     
-    func setupBackground() {
-        addSubview(backgroundImage)
-        addSubview(darkContainer)
-        
-        backgroundImage.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        backgroundImage.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        backgroundImage.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        backgroundImage.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        
-        darkContainer.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        darkContainer.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        darkContainer.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        darkContainer.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-    }
-
     func setupHeader() {
-        addSubview(header)
+        addSubview(header1)
+        addSubview(header2)
+        addSubview(header3)
+        addSubview(headerImage)
         addSubview(line1)
         addSubview(line2)
         addSubview(line3)
 
-        header.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -100).isActive = true
-        header.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        header1.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 90).isActive = true
+        header1.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        header2.topAnchor.constraint(equalTo: header1.bottomAnchor).isActive = true
+        header2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        header3.topAnchor.constraint(equalTo: header2.bottomAnchor).isActive = true
+        header3.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        
+        headerImage.heightAnchor.constraint(equalToConstant: 250).isActive = true
+        headerImage.widthAnchor.constraint(equalToConstant: 150).isActive = true
+        headerImage.topAnchor.constraint(equalTo: header3.bottomAnchor).isActive = true
+        headerImage.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
 
-        line1.centerXAnchor.constraint(equalTo: centerXAnchor, constant: -60).isActive = true
-        
-        line1.topAnchor.constraint(equalTo: header.bottomAnchor, constant: 20).isActive = true
-        
-        
-        //line2.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        line1.topAnchor.constraint(equalTo: headerImage.bottomAnchor, constant: 20).isActive = true
         line2.topAnchor.constraint(equalTo: line1.bottomAnchor).isActive = true
-        //line3.centerXAnchor.constraint(equalTo: centerXAnchor, constant: 70).isActive = true
         line3.topAnchor.constraint(equalTo: line2.bottomAnchor).isActive = true
     }
 
