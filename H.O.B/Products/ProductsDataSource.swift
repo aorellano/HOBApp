@@ -10,8 +10,9 @@ import UIKit
 
 class ProductsDataSource: NSObject, UICollectionViewDataSource {
     var data = [Product]()
+
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
@@ -21,6 +22,7 @@ class ProductsDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "product", for: indexPath) as! ProductCell
         let product = object(at: indexPath)
         cell.setup(product)
+        cell.productImage.downloadImage(url: URL(string: "http://127.0.0.1:8000"+product.image!))
         return cell
     }
     

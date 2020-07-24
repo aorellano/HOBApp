@@ -11,4 +11,5 @@ import UIKit
 struct Product: Decodable {
     let name: String?
     let price: Double?
+    let image: String?
 }

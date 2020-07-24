@@ -18,6 +18,7 @@ class ProductsController: UIViewController {
         productsView.collectionView.dataSource = dataSource
         productsView.collectionView.delegate = self
         
+        
         let url = URL(string: "http://127.0.0.1:8000/product-list/")!
         
         let task = URLSession.shared.dataTask(with: url){(data, response, err) in
@@ -28,6 +29,8 @@ class ProductsController: UIViewController {
             do {
                 let product = try decoder.decode([Product].self, from: data)
                 self.dataSource.update(with: product)
+                
+                print(product)
                 DispatchQueue.main.async {
                     self.productsView.collectionView.reloadData()
                 }
@@ -43,6 +46,11 @@ class ProductsController: UIViewController {
     
     override func loadView() {
         view = productsView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        navigationController?.navigationBar.isHidden = true
     }
 }
 

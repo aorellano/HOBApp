@@ -13,8 +13,8 @@ class ProductCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Masks"
         label.font = UIFont.collectionTitleFont
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 16, weight: .regular)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 10, weight: .medium)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
      }()
@@ -33,8 +33,8 @@ class ProductCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "$8.00"
         label.font = UIFont.collectionTitleFont
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        label.textColor = .white
+        label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -42,7 +42,7 @@ class ProductCell: UICollectionViewCell {
      override init(frame: CGRect) {
         super.init(frame: frame)
          
-        backgroundColor = .white
+        backgroundColor = UIColor.backgroundColor
         self.layer.cornerRadius = 15
         self.clipsToBounds = true
         setupPriceTitle()

@@ -11,10 +11,10 @@ import UIKit
 class ProductsView: UIView {
     let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: UIScreen.main.bounds.width/1.15, height: 400)
+        layout.itemSize = CGSize(width: UIScreen.main.bounds.width/2.35, height: 270)
         
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collectionView.contentInset = UIEdgeInsets(top: 5, left: 20, bottom: 20, right: 20)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 20, bottom: 20, right: 20)
         collectionView.backgroundColor = .backgroundColor
         collectionView.register(ProductCell.self, forCellWithReuseIdentifier: "product")
         collectionView.register(HeaderSection.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "header")

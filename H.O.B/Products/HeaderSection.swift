@@ -11,7 +11,7 @@ import UIKit
 class HeaderSection: UICollectionReusableView {
     let collectionTitle: UILabel = {
         let label = UILabel()
-        label.text = "Mens"
+        label.text = "Collection"
         label.font = UIFont.secondaryFont
         label.textColor = UIColor.primaryFontColor
         label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
